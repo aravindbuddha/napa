@@ -51,8 +51,21 @@ enyo.kind({
   timeChanged:function(){
   	this.$.time.setContent(this.time);
   },
-  bidTap:function(){
-  	alert('hi');
+  bidTap:function(){ alert('hi');
+  	var l = new enyo.Control;
+		var main=new App.Main().$.main;
+		main.destroyClientControls();
+  	l.createComponent({
+				kind: App.UI.IteamShort,
+				container: main,
+				pic:"pic",
+				id:"id",
+				lotname:"asdf",
+				amount:"sasdf",
+				time:"sdfsd"
+			});
+  	main.render();
   }
+
 });
 
