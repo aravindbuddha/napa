@@ -1,0 +1,9 @@
+{
+  "id": "com.msi.wineBid",
+  "version": "1.0.0",
+  "vendor": "msi",
+  "type": "web",
+  "main": "index.html",
+  "title": "Wine Bidder",
+  "uiRevision": "2"
+}

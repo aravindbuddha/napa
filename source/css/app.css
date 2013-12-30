@@ -1,0 +1,483 @@
+@font-face {
+  font-family: "font-icons";
+  src: url("fonts/font-icons.eot");
+  src: url("fonts/font-icons.eot?#iefix") format("embedded-opentype"), url("fonts/font-icons.woff") format("woff"), url("fonts/font-icons.ttf") format("truetype"), url("fonts/font-icons.svg#font-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 12, ../scss/font-icons.scss */
+[data-icon]:before {
+  font-family: "font-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 25, ../scss/font-icons.scss */
+[class^="fi-"]:before, [class*=" fi-"]:before {
+  font-family: "font-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 37, ../scss/font-icons.scss */
+.fi-right-arrow:before {
+  content: "b";
+}
+
+/* line 41, ../scss/font-icons.scss */
+.fi-left-arrow:before {
+  content: "c";
+}
+
+/* line 45, ../scss/font-icons.scss */
+.fi-fontawesome-webfont:before {
+  content: "b";
+}
+
+/* line 49, ../scss/font-icons.scss */
+.fi-eye:before {
+  content: "i";
+}
+
+/* line 53, ../scss/font-icons.scss */
+.fi-clock:before {
+  content: "j";
+}
+
+/* line 57, ../scss/font-icons.scss */
+.fi-drink:before {
+  content: "k";
+}
+
+/* line 61, ../scss/font-icons.scss */
+.fi-search:before {
+  content: "l";
+}
+
+/* line 65, ../scss/font-icons.scss */
+.fi-label:before {
+  content: "m";
+}
+
+/* line 69, ../scss/font-icons.scss */
+.fi-user:before {
+  content: "n";
+}
+
+/* line 73, ../scss/font-icons.scss */
+.fi-nav:before {
+  content: "o";
+}
+
+/* line 77, ../scss/font-icons.scss */
+.fi-help:before {
+  content: "r";
+}
+
+/* line 81, ../scss/font-icons.scss */
+.fi-notification:before {
+  content: "s";
+}
+
+/* line 85, ../scss/font-icons.scss */
+.fi-doller:before {
+  content: "t";
+}
+
+/* line 89, ../scss/font-icons.scss */
+.fi-order:before {
+  content: "u";
+}
+
+/*****************************
+	--> Normalize by Aravind
+******************************/
+/* line 5, ../scss/normolize.scss */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -box-sizing: border-box;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+/* line 20, ../scss/normolize.scss */
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -box-sizing: border-box;
+}
+
+/* line 29, ../scss/normolize.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  font-size: 100%;
+  vertical-align: center;
+}
+
+/* line 39, ../scss/normolize.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 43, ../scss/normolize.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 47, ../scss/normolize.scss */
+img {
+  border: none;
+}
+
+/* line 51, ../scss/normolize.scss */
+a {
+  outline: none;
+}
+
+/*****************************
+	--> Basic Elements
+******************************/
+/* line 5, ../scss/main.scss */
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 10, ../scss/main.scss */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #F2f2f2;
+  background: #f7f4ed repeat 50% 50%;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.055em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+/* line 35, ../scss/main.scss */
+a:link {
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out 0s;
+  -moz-transition: all 0.35s ease-in-out 0s;
+  -ms-transition: all 0.35s ease-in-out 0s;
+  -o-transition: all 0.35s ease-in-out 0s;
+  transition: all 0.35s ease-in-out 0s;
+}
+/* line 44, ../scss/main.scss */
+a:visited, a:hover, a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 50, ../scss/main.scss */
+::selection, ::-moz-selection {
+  color: #F6F6F6;
+  background: #010101;
+}
+
+/* line 55, ../scss/main.scss */
+.clear {
+  clear: both;
+}
+
+/* line 58, ../scss/main.scss */
+.main-wrap {
+  width: 320px;
+  margin: 0 auto;
+}
+
+/*****************************
+	--> Onyx OverWrite
+******************************/
+/* line 66, ../scss/main.scss */
+.toolbar {
+  background: #3d2f20;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 9px 8px 10px 8px;
+  border: 1px solid #3A3A3A;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow-y: visible;
+  font-size: 20px;
+  cursor: default;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 79, ../scss/main.scss */
+.nav-icon, .nav-icon:before, .nav-icon:after {
+  width: 20px;
+  height: 3px;
+  margin: 0;
+  background: #fff;
+}
+
+/* line 85, ../scss/main.scss */
+.nav-icon {
+  cursor: pointer;
+  float: left;
+  position: relative;
+  margin-top: 14px;
+  margin-right: 5px;
+}
+
+/* line 92, ../scss/main.scss */
+.nav-icon:before, .nav-icon:after {
+  content: "";
+  position: absolute;
+}
+
+/* line 96, ../scss/main.scss */
+.nav-icon:before {
+  top: -7px;
+}
+
+/* line 99, ../scss/main.scss */
+.nav-icon:after {
+  top: 7px;
+}
+
+/* line 103, ../scss/main.scss */
+.heading {
+  float: left;
+  color: #ffe7d7;
+  font-size: 29px;
+  font-family: "DaunPenh",Arial,sans-serif;
+  font-weight: 600;
+  height: 30px;
+}
+
+/* line 111, ../scss/main.scss */
+#main_side {
+  background: #282421;
+  /* Old browsers */
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(#282421), to(#241f1b));
+  background: -webkit-linear-gradient(left, #282421 0%, #241f1b 100%);
+  background: -moz-linear-gradient(left, #282421 0%, #241f1b 100%);
+  background: -o-linear-gradient(left, #282421 0%, #241f1b 100%);
+  background: linear-gradient(left, #282421 0%, #241f1b 100%);
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#282421', endColorstr='#241f1b',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 120, ../scss/main.scss */
+#main_side {
+  max-width: 300px;
+  height: 100%;
+  z-index: 99;
+  box-shadow: 5px 0px 11px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: -300px;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+}
+/* line 130, ../scss/main.scss */
+#main_side.active {
+  left: 0;
+}
+
+/* line 135, ../scss/main.scss */
+.side-nav li {
+  padding: 5px;
+  padding-left: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #1e1b16;
+  border-top: 1px solid #3a362d;
+}
+
+/* line 142, ../scss/main.scss */
+.side-nav [class*=" fi-"]::before {
+  font-style: 20px;
+  padding-right: 15px;
+  color: #ff8a16;
+}
+
+/* line 147, ../scss/main.scss */
+.side-nav .fi-label[class*=" fi-"]::before {
+  color: #f6ca35;
+}
+
+/* line 152, ../scss/main.scss */
+.side-nav li.fi-label {
+  color: #888;
+}
+/* line 155, ../scss/main.scss */
+.side-nav li.fi-user, .side-nav li.fi-label {
+  background: #070506;
+  border: 0;
+}
+
+/* line 161, ../scss/main.scss */
+.side-nav li:last-child {
+  border-bottom: 0;
+}
+
+/* line 166, ../scss/main.scss */
+.item {
+  width: auto;
+  margin: 20px 5px;
+  overflow: hidden;
+  border-left: 1px solid #d6cec8;
+  border-bottom: 3px solid #d6cec8;
+}
+/* line 172, ../scss/main.scss */
+.item img {
+  float: left;
+  min-width: 77px;
+  width: 25%;
+}
+/* line 178, ../scss/main.scss */
+.item .info {
+  float: left;
+  width: 75%;
+}
+/* line 179, ../scss/main.scss */
+.item .info span {
+  display: inline-block;
+}
+/* line 184, ../scss/main.scss */
+.item .info .top {
+  height: 36px;
+  overflow: hidden;
+}
+/* line 188, ../scss/main.scss */
+.item .info .middle {
+  height: 33px;
+  overflow: hidden;
+  color: #4f4438;
+  text-align: center;
+}
+/* line 193, ../scss/main.scss */
+.item .info .middle span {
+  border-right: 1px solid #d6cdc4;
+}
+/* line 197, ../scss/main.scss */
+.item .info .bottom {
+  height: 35px;
+  overflow: hidden;
+  border-top: 1px solid #d6cdc4;
+}
+/* line 201, ../scss/main.scss */
+.item .info .bottom a {
+  display: block;
+  width: 33%;
+  background: #ffffff;
+  height: 40px;
+  float: left;
+  border-right: 1px solid #d6cdc4;
+  color: #525b12;
+  padding: 0 0 0 15%;
+  cursor: pointer;
+  font-size: 10px;
+  position: relative;
+  top: -5px;
+  padding-top: 6px;
+}
+/* line 215, ../scss/main.scss */
+.item .info .bottom a:before {
+  border-radius: 50%;
+  background-color: #ff8a15;
+  display: inline-block;
+  padding: 4px;
+  color: #fff;
+  margin-right: 5px;
+  font-size: 12px;
+  position: absolute;
+  top: 13px;
+  left: 10%;
+}
+
+/* line 232, ../scss/main.scss */
+.item .info .id {
+  background: #c98d23;
+  line-height: 36px;
+  float: left;
+  text-align: center;
+  width: 20%;
+  padding: 0 2%;
+}
+/* line 240, ../scss/main.scss */
+.item .info .lotname {
+  background: #f7bf46;
+  line-height: 36px;
+  display: block;
+  padding: 0 5px;
+  float: left;
+  width: 80%;
+  color: #fff;
+}
+/* line 249, ../scss/main.scss */
+.item .info .amount {
+  background: #f7f4ed;
+  line-height: 33px;
+  padding: 0 1%;
+  width: 60%;
+  text-align: center;
+}
+/* line 256, ../scss/main.scss */
+.item .info .time {
+  background: #e6e0d8;
+  text-align: center;
+  width: 40%;
+  line-height: 33px;
+}
+/* line 263, ../scss/main.scss */
+.item .info .bottom .watchlist {
+  width: 40%;
+}
+/* line 266, ../scss/main.scss */
+.item .info .bottom .bid {
+  width: 27%;
+  background: #ffe3c5;
+  padding-top: 13px;
+  font-size: 13px;
+}
