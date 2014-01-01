@@ -54,21 +54,34 @@ a:visited, a:hover, a:active {
   background: #010101;
 }
 
-/* line 55, ../scss/main.scss */
+/* line 54, ../scss/main.scss */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+/* line 61, ../scss/main.scss */
 .clear {
   clear: both;
 }
 
-/* line 58, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .main-wrap {
   width: 320px;
   margin: 0 auto;
 }
 
+/* line 68, ../scss/main.scss */
+.inner-wrap {
+  padding: 0 5px;
+}
+
 /*****************************
 	--> Onyx OverWrite
 ******************************/
-/* line 66, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 .toolbar {
   background: #3d2f20;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -82,7 +95,15 @@ a:visited, a:hover, a:active {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 79, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
+.nav-icon-wrap {
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  float: left;
+}
+
+/* line 93, ../scss/main.scss */
 .nav-icon, .nav-icon:before, .nav-icon:after {
   width: 20px;
   height: 3px;
@@ -90,7 +111,7 @@ a:visited, a:hover, a:active {
   background: #fff;
 }
 
-/* line 85, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 .nav-icon {
   cursor: pointer;
   float: left;
@@ -99,23 +120,23 @@ a:visited, a:hover, a:active {
   margin-right: 5px;
 }
 
-/* line 92, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 .nav-icon:before, .nav-icon:after {
   content: "";
   position: absolute;
 }
 
-/* line 96, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 .nav-icon:before {
   top: -7px;
 }
 
-/* line 99, ../scss/main.scss */
+/* line 113, ../scss/main.scss */
 .nav-icon:after {
   top: 7px;
 }
 
-/* line 103, ../scss/main.scss */
+/* line 117, ../scss/main.scss */
 .heading {
   float: left;
   color: #ffe7d7;
@@ -125,8 +146,8 @@ a:visited, a:hover, a:active {
   height: 30px;
 }
 
-/* line 111, ../scss/main.scss */
-#main_side {
+/* line 125, ../scss/main.scss */
+.side-wrap {
   background: #282421;
   /* Old browsers */
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#282421), to(#241f1b));
@@ -144,8 +165,8 @@ a:visited, a:hover, a:active {
   /* IE6-9 */
 }
 
-/* line 120, ../scss/main.scss */
-#main_side {
+/* line 134, ../scss/main.scss */
+.side-wrap {
   max-width: 300px;
   height: 100%;
   z-index: 99;
@@ -155,12 +176,12 @@ a:visited, a:hover, a:active {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 19px;
 }
-/* line 130, ../scss/main.scss */
-#main_side.active {
+/* line 144, ../scss/main.scss */
+.side-wrap.active {
   left: 0;
 }
 
-/* line 135, ../scss/main.scss */
+/* line 149, ../scss/main.scss */
 .side-nav li {
   padding: 5px;
   padding-left: 20px;
@@ -169,34 +190,34 @@ a:visited, a:hover, a:active {
   border-top: 1px solid #3a362d;
 }
 
-/* line 142, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 .side-nav [class*=" fi-"]::before {
   font-style: 20px;
   padding-right: 15px;
   color: #ff8a16;
 }
 
-/* line 147, ../scss/main.scss */
+/* line 161, ../scss/main.scss */
 .side-nav .fi-label[class*=" fi-"]::before {
   color: #f6ca35;
 }
 
-/* line 152, ../scss/main.scss */
+/* line 166, ../scss/main.scss */
 .side-nav li.fi-label {
   color: #888;
 }
-/* line 155, ../scss/main.scss */
+/* line 169, ../scss/main.scss */
 .side-nav li.fi-user, .side-nav li.fi-label {
   background: #070506;
   border: 0;
 }
 
-/* line 161, ../scss/main.scss */
+/* line 175, ../scss/main.scss */
 .side-nav li:last-child {
   border-bottom: 0;
 }
 
-/* line 166, ../scss/main.scss */
+/* line 180, ../scss/main.scss */
 .item {
   width: auto;
   margin: 20px 5px;
@@ -204,44 +225,44 @@ a:visited, a:hover, a:active {
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
 }
-/* line 172, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 .item img {
   float: left;
   min-width: 77px;
   width: 25%;
 }
-/* line 178, ../scss/main.scss */
+/* line 192, ../scss/main.scss */
 .item .info {
   float: left;
   width: 75%;
 }
-/* line 179, ../scss/main.scss */
+/* line 193, ../scss/main.scss */
 .item .info span {
   display: inline-block;
 }
-/* line 184, ../scss/main.scss */
+/* line 198, ../scss/main.scss */
 .item .info .top {
   height: 36px;
   overflow: hidden;
 }
-/* line 188, ../scss/main.scss */
+/* line 202, ../scss/main.scss */
 .item .info .middle {
   height: 33px;
   overflow: hidden;
   color: #4f4438;
   text-align: center;
 }
-/* line 193, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 .item .info .middle span {
   border-right: 1px solid #d6cdc4;
 }
-/* line 197, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .item .info .bottom {
   height: 35px;
   overflow: hidden;
   border-top: 1px solid #d6cdc4;
 }
-/* line 201, ../scss/main.scss */
+/* line 215, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
   width: 33%;
@@ -257,7 +278,7 @@ a:visited, a:hover, a:active {
   top: -5px;
   padding-top: 6px;
 }
-/* line 215, ../scss/main.scss */
+/* line 229, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -271,7 +292,7 @@ a:visited, a:hover, a:active {
   left: 10%;
 }
 
-/* line 232, ../scss/main.scss */
+/* line 246, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -280,7 +301,7 @@ a:visited, a:hover, a:active {
   width: 20%;
   padding: 0 2%;
 }
-/* line 240, ../scss/main.scss */
+/* line 254, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -290,7 +311,7 @@ a:visited, a:hover, a:active {
   width: 80%;
   color: #fff;
 }
-/* line 249, ../scss/main.scss */
+/* line 263, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -298,21 +319,62 @@ a:visited, a:hover, a:active {
   width: 60%;
   text-align: center;
 }
-/* line 256, ../scss/main.scss */
+/* line 270, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 263, ../scss/main.scss */
+/* line 277, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 266, ../scss/main.scss */
+/* line 280, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
   padding-top: 13px;
   font-size: 13px;
+}
+
+/*Finder Classes*/
+/* line 293, ../scss/main.scss */
+#find_main {
+  border: 1px solid #d1d1d1;
+}
+
+/* line 301, ../scss/main.scss */
+.finder-item {
+  background: #fff;
+  border-bottom: 1px solid #d3c0ab;
+  overflow: hidden;
+  padding: 10px;
+  color: #333232;
+}
+/* line 307, ../scss/main.scss */
+.finder-item .id {
+  background: #3d2f20;
+  color: #ff8a15;
+  float: left;
+  padding: 5%;
+  font-weight: bold;
+  width: 20%;
+}
+/* line 315, ../scss/main.scss */
+.finder-item .info {
+  float: left;
+  width: 80%;
+  padding-left: 10px;
+  line-height: 14px;
+}
+/* line 320, ../scss/main.scss */
+.finder-item .info .lotname {
+  display: block;
+  font-size: 14px;
+}
+/* line 324, ../scss/main.scss */
+.finder-item .info .desc {
+  color: #9e9d9d;
+  font-size: 12px;
 }
