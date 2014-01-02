@@ -10,7 +10,7 @@ enyo.kind({
 	tag: "div", 
 	classes:"watchlist-item",
 	components: [
-		{tag:"a",href:"",components:[
+		{tag:"a",name:"idname",href:"",ontap:"iteamTap",components:[
 			{tag:"span",name:"id"},
 			{tag:"span",name:"lotname"}
 		]},
@@ -37,6 +37,11 @@ enyo.kind({
   },
   timeChanged:function(){
   	this.$.time.setContent(this.time);
+  },
+  iteamTap:function() {
+  	var iteam=new App.Iteam({"lotId":this.$.id.getContent().slice(1)});
+  	console.log(iteam);
+  	iteam.renderInto(document.body);
   }
 });
 

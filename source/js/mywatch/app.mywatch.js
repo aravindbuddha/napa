@@ -5,6 +5,10 @@ enyo.kind({
 	fit: true,
 	tag:'div',
 	classes:'main-wrap',
+	create: function() { 
+		this.inherited(arguments);
+		this.displayIteams();
+  },
 	components:[
 		{tag:"div",classes:"toolbar", components: [
 			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
@@ -15,7 +19,14 @@ enyo.kind({
 		]},
 		{kind: "enyo.Scroller", fit: true, components: [
 			{kind:App.Nav, name:'side',classes:'side-wrap'},
-			{name:"main", allowHtml: true}
+			{tag:"div",classes:"inner-wrap",components:[
+				{tag:'div',classes:'headder',components:[
+					{tag:'b',content:"Wine from"},
+					{tag:'b',content:"Current Bid"},
+					{tag:'b',content:"Time Left"}
+				]},
+				{name:"main", allowHtml: true}
+			]}
 		]}
 	],
 	navIconTap: function(inSender, inEvent) {
@@ -28,24 +39,16 @@ enyo.kind({
 			nav.attributes.isActive=false;
 		}
 	},
-	getData:function(){ 
-		var base=this,xhr;
-		//set up enyo.AjaxProperties the enyo.Ajax constructor
-    xhr = new enyo.Ajax({url: "source/js/db.json"});
-    xhr.response(enyo.bind(this, "processResults"));
-		xhr.go();
-	},
-	processResults: function(inRequest, inResponse) { 
+	displayIteams: function(inRequest, inResponse) { 
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		inResponse.items.forEach(function(iteam){
+		app.db.items.forEach(function(iteam){
 			l.createComponent({
 				kind: App.MyWatch.IteamList,
 				container: main,
-				pic:iteam.pic,
-				id:iteam.id,
-				lotname:iteam.lotName,
+				id:"#"+iteam.id+" ",
+				lotname:iteam.lotName.substring(0,6)+"...",
 				amount:iteam.amount,
 				time:iteam.time
 			});

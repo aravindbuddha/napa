@@ -4,9 +4,8 @@ enyo.depends(
 	// //"Theme.less",	// uncomment this line, and follow the steps described in Theme.less
 	"js/app",
 	"js/home",
+	"js/finder",
+	"js/mywatch",
+	"js/iteam",
 	"js/init.js"
-	
-	
-	// "js/finder",
-	// "js/mywatch"
 );

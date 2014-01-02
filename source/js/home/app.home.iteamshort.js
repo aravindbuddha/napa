@@ -53,7 +53,7 @@ enyo.kind({
   },
   bidTap:function(){ alert('hi');
   	var l = new enyo.Control;
-		var main=new App.Main().$.main;
+		var home=new App.Home().$.main;
 		main.destroyClientControls();
   	l.createComponent({
 				kind: App.UI.IteamShort,

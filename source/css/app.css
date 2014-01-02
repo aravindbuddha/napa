@@ -197,9 +197,13 @@ body {
   font-smoothing: antialiased;
 }
 
-/* line 35, ../scss/main.scss */
+/* line 34, ../scss/main.scss */
+a {
+  text-decoration: underline;
+  color: #ff8a15;
+}
+/* line 37, ../scss/main.scss */
 a:link {
-  color: #fff;
   text-decoration: none;
   -webkit-transition: all 0.35s ease-in-out 0s;
   -moz-transition: all 0.35s ease-in-out 0s;
@@ -207,10 +211,9 @@ a:link {
   -o-transition: all 0.35s ease-in-out 0s;
   transition: all 0.35s ease-in-out 0s;
 }
-/* line 44, ../scss/main.scss */
+/* line 45, ../scss/main.scss */
 a:visited, a:hover, a:active {
-  color: #fff;
-  text-decoration: none;
+  color: #ff8a15;
 }
 
 /* line 50, ../scss/main.scss */
@@ -234,13 +237,13 @@ input {
 
 /* line 64, ../scss/main.scss */
 .main-wrap {
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 
 /* line 68, ../scss/main.scss */
 .inner-wrap {
-  padding: 0 5px;
+  padding: 0px 5px;
 }
 
 /*****************************
@@ -430,6 +433,7 @@ input {
 /* line 215, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
+  text-decoration: none;
   width: 33%;
   background: #ffffff;
   height: 40px;
@@ -443,7 +447,7 @@ input {
   top: -5px;
   padding-top: 6px;
 }
-/* line 229, ../scss/main.scss */
+/* line 230, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -457,7 +461,7 @@ input {
   left: 10%;
 }
 
-/* line 246, ../scss/main.scss */
+/* line 247, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -466,7 +470,7 @@ input {
   width: 20%;
   padding: 0 2%;
 }
-/* line 254, ../scss/main.scss */
+/* line 255, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -476,7 +480,7 @@ input {
   width: 80%;
   color: #fff;
 }
-/* line 263, ../scss/main.scss */
+/* line 264, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -484,18 +488,18 @@ input {
   width: 60%;
   text-align: center;
 }
-/* line 270, ../scss/main.scss */
+/* line 271, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 277, ../scss/main.scss */
+/* line 278, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 280, ../scss/main.scss */
+/* line 281, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
@@ -504,12 +508,12 @@ input {
 }
 
 /*Finder Classes*/
-/* line 293, ../scss/main.scss */
+/* line 294, ../scss/main.scss */
 #find_main {
   border: 1px solid #d1d1d1;
 }
 
-/* line 301, ../scss/main.scss */
+/* line 302, ../scss/main.scss */
 .finder-item {
   background: #fff;
   border-bottom: 1px solid #d3c0ab;
@@ -517,7 +521,7 @@ input {
   padding: 10px;
   color: #333232;
 }
-/* line 307, ../scss/main.scss */
+/* line 308, ../scss/main.scss */
 .finder-item .id {
   background: #3d2f20;
   color: #ff8a15;
@@ -526,20 +530,120 @@ input {
   font-weight: bold;
   width: 20%;
 }
-/* line 315, ../scss/main.scss */
+/* line 316, ../scss/main.scss */
 .finder-item .info {
   float: left;
   width: 80%;
   padding-left: 10px;
   line-height: 14px;
 }
-/* line 320, ../scss/main.scss */
+/* line 321, ../scss/main.scss */
 .finder-item .info .lotname {
   display: block;
   font-size: 14px;
 }
-/* line 324, ../scss/main.scss */
+/* line 325, ../scss/main.scss */
 .finder-item .info .desc {
   color: #9e9d9d;
   font-size: 12px;
+}
+
+/*MyWatch Classes*/
+/* line 333, ../scss/main.scss */
+.headder {
+  background: #c98d23;
+}
+/* line 336, ../scss/main.scss */
+.headder b {
+  text-align: center;
+  font-weight: normal;
+  padding-left: 12%;
+  width: 25%;
+  display: inline-block;
+}
+
+/* line 345, ../scss/main.scss */
+.watchlist-item {
+  border: 1px solid #d1d1d1;
+  border-top: 0;
+  background: #fff;
+  color: #3d2f20;
+  padding: 10px;
+}
+/* line 351, ../scss/main.scss */
+.watchlist-item a {
+  color: #ff8a15;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* line 355, ../scss/main.scss */
+.watchlist-item a:hover {
+  color: #ff8a15;
+}
+/* line 359, ../scss/main.scss */
+.watchlist-item > span {
+  padding-left: 5%;
+}
+/* line 362, ../scss/main.scss */
+.watchlist-item button {
+  margin-left: 5%;
+  background: #f7bf46;
+  padding: 5px;
+  border-bottom: 2px solid #d6cec8;
+  cursor: pointer;
+}
+
+/*iteam */
+/* line 372, ../scss/main.scss */
+.iteam-head {
+  font-weight: normal;
+  text-align: center;
+  float: none;
+}
+
+/* line 378, ../scss/main.scss */
+.iteam-full .pic {
+  width: 100%;
+}
+/* line 381, ../scss/main.scss */
+.iteam-full .desc {
+  color: #333232;
+  padding: 10px;
+}
+/* line 385, ../scss/main.scss */
+.iteam-full .viewmore {
+  float: right;
+}
+/* line 388, ../scss/main.scss */
+.iteam-full .iteam-bid-btn {
+  width: 100%;
+  padding: 10px;
+  background: #f7bf46;
+  text-align: center;
+}
+
+/* line 395, ../scss/main.scss */
+.amountBtn, .addWatchBtn {
+  width: 48%;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 2px solid #ccc6c2;
+}
+
+/* line 401, ../scss/main.scss */
+.amountBtn {
+  margin-right: 2%;
+}
+
+/* line 404, ../scss/main.scss */
+.addWatchBtn {
+  margin-left: 2%;
+  background: #f7bf46;
+  position: relative;
+}
+/* line 408, ../scss/main.scss */
+.addWatchBtn:before {
+  position: absolute;
+  right: 10%;
+  top: 32%;
 }

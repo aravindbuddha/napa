@@ -32,8 +32,9 @@ body {
 }
 
 a {
+  text-decoration: underline;
+  color: #ff8a15;
   &:link {
-    color: #fff;
     text-decoration: none;
     -webkit-transition: all 0.35s ease-in-out 0s;
     -moz-transition: all 0.35s ease-in-out 0s;
@@ -42,8 +43,7 @@ a {
     transition: all 0.35s ease-in-out 0s;
   }
   &:visited, &:hover, &:active {
-    color: #fff;
-    text-decoration: none;
+    color: #ff8a15;
   }
 }
 
@@ -62,11 +62,11 @@ input{
   clear: both;
 }
 .main-wrap{
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
 }
 .inner-wrap{
-  padding: 0 5px;
+  padding: 0px 5px;
 }
 /*****************************
 	--> Onyx OverWrite
@@ -214,6 +214,7 @@ margin-right: 5px;
       border-top:1px solid #d6cdc4; 
       a{
        display: block;
+       text-decoration: none;
       width: 33%;
       background: #ffffff;
       height: 40px;
@@ -325,5 +326,88 @@ margin-right: 5px;
       color: #9e9d9d;
       font-size: 12px;
     }
+  }
+}
+
+/*MyWatch Classes*/
+.headder{
+  background: #c98d23 ;
+  
+  b{
+    text-align: center;
+    font-weight: normal;
+    padding-left: 12%;
+    width: 25%;
+    display: inline-block;
+   
+  }
+}
+.watchlist-item{
+   border: 1px solid #d1d1d1;
+   border-top: 0;
+   background: #fff;
+   color: #3d2f20;
+   padding: 10px;
+   a{
+    color: #ff8a15;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+      color: #ff8a15;
+    }
+   }
+   & > span{
+    padding-left: 5%;
+   }
+   button{
+    margin-left: 5%;
+    background: #f7bf46;
+    padding:5px;
+    border-bottom: 2px solid #d6cec8;
+    cursor: pointer;
+   }
+}
+
+/*iteam */
+.iteam-head{
+  font-weight: normal;
+  text-align: center;
+  float: none;
+}
+.iteam-full{
+  .pic{
+    width: 100%;
+  }
+  .desc{
+    color: #333232;
+    padding: 10px;
+  }
+  .viewmore{
+    float: right;
+  }
+  .iteam-bid-btn{
+    width: 100%;
+    padding: 10px;
+    background: #f7bf46;
+    text-align: center;
+  }
+}
+.amountBtn,.addWatchBtn{
+  width: 48%;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 2px solid #ccc6c2;
+}
+.amountBtn{
+  margin-right:2%; 
+}
+.addWatchBtn{
+  margin-left:2%; 
+  background: #f7bf46;
+  position: relative;
+  &:before{
+    position: absolute;
+    right: 10%;
+    top: 32%;
   }
 }

@@ -12,14 +12,12 @@ enyo.kind({
 			{tag:'h1',name:"heading",classes:"heading",content:"Napa Valley 2014 Aution"},
 			{tag:'div',classes:"clear"}
 		]},
-		{kind: "enyo.Scroller", fit: true, components: [
-			{kind:App.Nav, name:'side',classes:'side-wrap'},
-			{name:"main", allowHtml: true}
-		]}
+		{kind:App.Nav, name:'side',classes:'side-wrap'},
+		{kind: "enyo.Scroller",vertical:"scroll",touchOverscroll:false,strategyKind: "TouchScrollStrategy",thumb: true,touch: true,name:"main", allowHtml: true}
 	],
 	create: function() {
 		this.inherited(arguments);
-    this.displayIteams();
+		this.displayIteams();
   },
 	navIconTap: function(inSender, inEvent) {
 		var nav=this.$.navIcon;
@@ -42,10 +40,8 @@ enyo.kind({
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		var app=new App();
-		var db=app.getData();
-		console.log(db);
-		db.items.forEach(function(iteam){
+		
+		app.db.items.forEach(function(iteam){
 			l.createComponent({
 				kind: App.Home.IteamShort,
 				container: main,

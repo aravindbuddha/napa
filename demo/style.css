@@ -1,0 +1,134 @@
+/*****************************
+	--> Normalize by BDA
+******************************/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	       -box-sizing: border-box;
+}
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	       -box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	height: auto;
+	font-size: 100%;
+	vertical-align: center;
+}
+table { border-collapse: collapse; }
+ul, ol, li { list-style: none; }
+img { border: none; }
+a { outline: none; }
+
+/*****************************
+	--> Basic Elements
+******************************/
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #F6F6F6;
+	background: #1A1A1A repeat 50% 50%;
+	font-family: "Raleway Thin", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 1.5;
+	letter-spacing: 0.055em;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	       -box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	   -moz-font-smoothing: antialiased;
+	    -ms-font-smoothing: antialiased;
+	     -o-font-smoothing: antialiased;
+	        font-smoothing: antialiased;
+}
+a:link {
+	color: #35C9DC;
+	text-decoration: none;
+	-webkit-transition: all 0.35s ease-in-out 0s;
+	   -moz-transition: all 0.35s ease-in-out 0s;
+	    -ms-transition: all 0.35s ease-in-out 0s;
+	     -o-transition: all 0.35s ease-in-out 0s;
+	        transition: all 0.35s ease-in-out 0s;
+}
+a:visited {
+	color: #35C9DC;
+	text-decoration: none;
+}
+a:hover {
+	color: #35C9DC;
+	text-decoration: none;
+}
+a:active {
+	color: #35C9DC;
+	text-decoration: none;
+}
+::selection {
+	color: #F6F6F6;
+	background: #010101;
+}
+::-moz-selection {
+	color: #F6F6F6;
+	background: #010101;
+}
+.clear {
+	clear: both;
+}
+
+
+.switcher-bar {
+	background: #2A2F36;
+	border-bottom: 1px solid #222;
+	height: 60px;
+	position: relative;
+	z-index: 22;
+}
+.btn{
+	color: #fff;
+	float: right;
+	padding-left: 30px;
+	margin-left: 30px;
+	width: 100px;
+	height: 100%;
+}
+.btn a{
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 60px;
+}
+.btn:hover{
+	background: rgba(225,225,225,0.3);
+}
+
+iframe{
+	display: block !important;
+	height: 600px;
+	margin: 0 auto;	
+	max-width: 100%;
+	width: 100%;
+	-webkit-transform: translateZ(0);
+}

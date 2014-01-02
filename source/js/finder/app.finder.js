@@ -1,10 +1,13 @@
 enyo.kind({
 	name: "App.Find",
 	kind: enyo.Control,
-	db:{},
 	fit: true,
 	tag:'div',
 	classes:'main-wrap',
+	create: function() { alert('hi');
+		this.inherited(arguments);
+		this.displayIteams();
+  },
 	components:[
 		{tag:"div",classes:"toolbar", components: [
 			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
@@ -14,11 +17,11 @@ enyo.kind({
 			{tag:'div',classes:"clear"}
 		]},
 		{tag:"div",classes:"inner-wrap",components:[
-			{tag:"input",name:"q",classes:"q fi-search",attributes: 
-				{type: "search",placeholder:"Enter term.."}
-			},
 			{kind: "enyo.Scroller", fit: true, components: [
 				{kind:App.Nav, name:'side',classes:'side-wrap'},
+				{tag:"input",name:"q",classes:"q fi-search",attributes: 
+					{type: "search",placeholder:"Enter term.."}
+				},
 				{name:"main",allowHtml: true}
 			]}
 		]}
@@ -40,11 +43,11 @@ enyo.kind({
     xhr.response(enyo.bind(this, "processResults"));
 		xhr.go();
 	},
-	processResults: function(inRequest, inResponse) { 
+	displayIteams: function() { 
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		inResponse.items.forEach(function(iteam){
+		app.db.items.forEach(function(iteam){
 			l.createComponent({
 				kind: App.Finder.IteamList,
 				container: main,
