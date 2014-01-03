@@ -2,9 +2,16 @@ enyo.kind({
 	name: "App",
 	kind: enyo.Object,
 	db:{},
+	userId:"",
 	constructor: function() { 
     this.getData();
    // enyo.Scroller.touchScrolling = true;
+  },
+  setUserId:function(id){
+  	this.userId=id;
+  },
+  getUserId:function() {
+  	return this.userId;
   },
 	getData:function(){ 
 		var base=this,xhr;

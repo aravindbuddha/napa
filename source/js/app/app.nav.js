@@ -18,7 +18,7 @@ enyo.kind({
 	   alert('hi');
 	},
 	finderTap: function(inSender, inEvent){ 
-		var find=new App.Find();
+		var find=new App.Finder();
 		find.renderInto(document.body);
 		
 	},

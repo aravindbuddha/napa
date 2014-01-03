@@ -552,6 +552,7 @@ input {
 /* line 333, ../scss/main.scss */
 .headder {
   background: #c98d23;
+  margin-top: 10px;
 }
 /* line 336, ../scss/main.scss */
 .headder b {

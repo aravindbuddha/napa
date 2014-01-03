@@ -1,10 +1,10 @@
 enyo.kind({
-	name: "App.Find",
+	name: "App.Finder",
 	kind: enyo.Control,
 	fit: true,
 	tag:'div',
 	classes:'main-wrap',
-	create: function() { alert('hi');
+	create: function() { 
 		this.inherited(arguments);
 		this.displayIteams();
   },
