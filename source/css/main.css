@@ -61,7 +61,7 @@ a:visited, a:hover, a:active {
 input {
   width: 100%;
   padding: 10px;
-  margin: 20px 0;
+  margin: 10px 5px;
   border-radius: 4px;
 }
 
@@ -81,10 +81,15 @@ input {
   padding: 0px 5px;
 }
 
+/* line 71, ../scss/main.scss */
+.scroll-panal {
+  position: relative;
+}
+
 /*****************************
 	--> Onyx OverWrite
 ******************************/
-/* line 75, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 .toolbar {
   background: #3d2f20;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -98,7 +103,7 @@ input {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 87, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 .nav-icon-wrap {
   cursor: pointer;
   display: block;
@@ -106,7 +111,7 @@ input {
   float: left;
 }
 
-/* line 93, ../scss/main.scss */
+/* line 97, ../scss/main.scss */
 .nav-icon, .nav-icon:before, .nav-icon:after {
   width: 20px;
   height: 3px;
@@ -114,7 +119,7 @@ input {
   background: #fff;
 }
 
-/* line 99, ../scss/main.scss */
+/* line 103, ../scss/main.scss */
 .nav-icon {
   cursor: pointer;
   float: left;
@@ -123,33 +128,33 @@ input {
   margin-right: 5px;
 }
 
-/* line 106, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 .nav-icon:before, .nav-icon:after {
   content: "";
   position: absolute;
 }
 
-/* line 110, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 .nav-icon:before {
   top: -7px;
 }
 
-/* line 113, ../scss/main.scss */
+/* line 117, ../scss/main.scss */
 .nav-icon:after {
   top: 7px;
 }
 
-/* line 117, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 .heading {
   float: left;
   color: #ffe7d7;
-  font-size: 29px;
+  font-size: 140%;
   font-family: "DaunPenh",Arial,sans-serif;
   font-weight: 600;
   height: 30px;
 }
 
-/* line 125, ../scss/main.scss */
+/* line 129, ../scss/main.scss */
 .side-wrap {
   background: #282421;
   /* Old browsers */
@@ -168,7 +173,7 @@ input {
   /* IE6-9 */
 }
 
-/* line 134, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 .side-wrap {
   max-width: 300px;
   height: 100%;
@@ -179,12 +184,12 @@ input {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 19px;
 }
-/* line 144, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 .side-wrap.active {
   left: 0;
 }
 
-/* line 149, ../scss/main.scss */
+/* line 153, ../scss/main.scss */
 .side-nav li {
   padding: 5px;
   padding-left: 20px;
@@ -193,79 +198,83 @@ input {
   border-top: 1px solid #3a362d;
 }
 
-/* line 156, ../scss/main.scss */
+/* line 160, ../scss/main.scss */
 .side-nav [class*=" fi-"]::before {
   font-style: 20px;
   padding-right: 15px;
   color: #ff8a16;
 }
 
-/* line 161, ../scss/main.scss */
+/* line 165, ../scss/main.scss */
 .side-nav .fi-label[class*=" fi-"]::before {
   color: #f6ca35;
 }
 
-/* line 166, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 .side-nav li.fi-label {
   color: #888;
 }
-/* line 169, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 .side-nav li.fi-user, .side-nav li.fi-label {
   background: #070506;
   border: 0;
 }
 
-/* line 175, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 .side-nav li:last-child {
   border-bottom: 0;
 }
 
-/* line 180, ../scss/main.scss */
+/* line 184, ../scss/main.scss */
+.item-wrap {
+  padding: 10px 5px;
+}
+
+/* line 187, ../scss/main.scss */
 .item {
   width: auto;
-  margin: 20px 5px;
   overflow: hidden;
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
 }
-/* line 186, ../scss/main.scss */
+/* line 192, ../scss/main.scss */
 .item img {
   float: left;
   min-width: 77px;
   width: 25%;
 }
-/* line 192, ../scss/main.scss */
+/* line 198, ../scss/main.scss */
 .item .info {
   float: left;
   width: 75%;
 }
-/* line 193, ../scss/main.scss */
+/* line 199, ../scss/main.scss */
 .item .info span {
   display: inline-block;
 }
-/* line 198, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .item .info .top {
   height: 36px;
   overflow: hidden;
 }
-/* line 202, ../scss/main.scss */
+/* line 208, ../scss/main.scss */
 .item .info .middle {
   height: 33px;
   overflow: hidden;
   color: #4f4438;
   text-align: center;
 }
-/* line 207, ../scss/main.scss */
+/* line 213, ../scss/main.scss */
 .item .info .middle span {
   border-right: 1px solid #d6cdc4;
 }
-/* line 211, ../scss/main.scss */
+/* line 217, ../scss/main.scss */
 .item .info .bottom {
   height: 35px;
   overflow: hidden;
   border-top: 1px solid #d6cdc4;
 }
-/* line 215, ../scss/main.scss */
+/* line 221, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
   text-decoration: none;
@@ -282,7 +291,7 @@ input {
   top: -5px;
   padding-top: 6px;
 }
-/* line 230, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -296,7 +305,7 @@ input {
   left: 10%;
 }
 
-/* line 247, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -305,7 +314,7 @@ input {
   width: 20%;
   padding: 0 2%;
 }
-/* line 255, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -315,7 +324,7 @@ input {
   width: 80%;
   color: #fff;
 }
-/* line 264, ../scss/main.scss */
+/* line 270, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -323,18 +332,18 @@ input {
   width: 60%;
   text-align: center;
 }
-/* line 271, ../scss/main.scss */
+/* line 277, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 278, ../scss/main.scss */
+/* line 284, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 281, ../scss/main.scss */
+/* line 287, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
@@ -343,20 +352,21 @@ input {
 }
 
 /*Finder Classes*/
-/* line 294, ../scss/main.scss */
+/* line 300, ../scss/main.scss */
 #find_main {
   border: 1px solid #d1d1d1;
 }
 
-/* line 302, ../scss/main.scss */
+/* line 308, ../scss/main.scss */
 .finder-item {
   background: #fff;
   border-bottom: 1px solid #d3c0ab;
   overflow: hidden;
   padding: 10px;
+  margin: 0 5px;
   color: #333232;
 }
-/* line 308, ../scss/main.scss */
+/* line 315, ../scss/main.scss */
 .finder-item .id {
   background: #3d2f20;
   color: #ff8a15;
@@ -365,31 +375,31 @@ input {
   font-weight: bold;
   width: 20%;
 }
-/* line 316, ../scss/main.scss */
+/* line 323, ../scss/main.scss */
 .finder-item .info {
   float: left;
   width: 80%;
   padding-left: 10px;
   line-height: 14px;
 }
-/* line 321, ../scss/main.scss */
+/* line 328, ../scss/main.scss */
 .finder-item .info .lotname {
   display: block;
   font-size: 14px;
 }
-/* line 325, ../scss/main.scss */
+/* line 332, ../scss/main.scss */
 .finder-item .info .desc {
   color: #9e9d9d;
   font-size: 12px;
 }
 
 /*MyWatch Classes*/
-/* line 333, ../scss/main.scss */
+/* line 340, ../scss/main.scss */
 .headder {
   background: #c98d23;
   margin-top: 10px;
 }
-/* line 336, ../scss/main.scss */
+/* line 343, ../scss/main.scss */
 .headder b {
   text-align: center;
   font-weight: normal;
@@ -398,7 +408,7 @@ input {
   display: inline-block;
 }
 
-/* line 345, ../scss/main.scss */
+/* line 352, ../scss/main.scss */
 .watchlist-item {
   border: 1px solid #d1d1d1;
   border-top: 0;
@@ -406,21 +416,21 @@ input {
   color: #3d2f20;
   padding: 10px;
 }
-/* line 351, ../scss/main.scss */
+/* line 358, ../scss/main.scss */
 .watchlist-item a {
   color: #ff8a15;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 355, ../scss/main.scss */
+/* line 362, ../scss/main.scss */
 .watchlist-item a:hover {
   color: #ff8a15;
 }
-/* line 359, ../scss/main.scss */
+/* line 366, ../scss/main.scss */
 .watchlist-item > span {
   padding-left: 5%;
 }
-/* line 362, ../scss/main.scss */
+/* line 369, ../scss/main.scss */
 .watchlist-item button {
   margin-left: 5%;
   background: #f7bf46;
@@ -430,27 +440,27 @@ input {
 }
 
 /*iteam */
-/* line 372, ../scss/main.scss */
+/* line 379, ../scss/main.scss */
 .iteam-head {
   font-weight: normal;
   text-align: center;
   float: none;
 }
 
-/* line 378, ../scss/main.scss */
+/* line 385, ../scss/main.scss */
 .iteam-full .pic {
   width: 100%;
 }
-/* line 381, ../scss/main.scss */
+/* line 388, ../scss/main.scss */
 .iteam-full .desc {
   color: #333232;
   padding: 10px;
 }
-/* line 385, ../scss/main.scss */
+/* line 392, ../scss/main.scss */
 .iteam-full .viewmore {
   float: right;
 }
-/* line 388, ../scss/main.scss */
+/* line 395, ../scss/main.scss */
 .iteam-full .iteam-bid-btn {
   width: 100%;
   padding: 10px;
@@ -458,7 +468,7 @@ input {
   text-align: center;
 }
 
-/* line 395, ../scss/main.scss */
+/* line 402, ../scss/main.scss */
 .amountBtn, .addWatchBtn {
   width: 48%;
   padding: 10px;
@@ -466,18 +476,18 @@ input {
   border-bottom: 2px solid #ccc6c2;
 }
 
-/* line 401, ../scss/main.scss */
+/* line 408, ../scss/main.scss */
 .amountBtn {
   margin-right: 2%;
 }
 
-/* line 404, ../scss/main.scss */
+/* line 411, ../scss/main.scss */
 .addWatchBtn {
   margin-left: 2%;
   background: #f7bf46;
   position: relative;
 }
-/* line 408, ../scss/main.scss */
+/* line 415, ../scss/main.scss */
 .addWatchBtn:before {
   position: absolute;
   right: 10%;

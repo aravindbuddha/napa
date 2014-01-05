@@ -11,8 +11,8 @@ enyo.kind({
 			{tag:'div',classes:"clear"}
 		]},
 	  {kind:App.Nav, name:'side',classes:'side-wrap'},
-		{kind: "Panels", fit: true, draggable: false, classes: "scroller-sample-panels", components: [
-			{kind: "Scroller", classes: "enyo-fit", strategyKind: "TranslateScrollStrategy", thumb: true,touch: true,name:"main", allowHtml: true}
+		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  components: [
+			{kind: "Scroller", classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,name:"main", allowHtml: true}
 		]}
 	],
 	create: function() {

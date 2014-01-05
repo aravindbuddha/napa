@@ -54,7 +54,7 @@ a {
 input{
   width: 100%;
   padding: 10px;
-  margin: 20px 0;
+  margin: 10px 5px;
   border-radius: 4px;
 }
 
@@ -67,6 +67,10 @@ input{
 }
 .inner-wrap{
   padding: 0px 5px;
+}
+.scroll-panal{
+  position: relative;
+  
 }
 /*****************************
 	--> Onyx OverWrite
@@ -117,7 +121,7 @@ margin-right: 5px;
 .heading {
   float: left;
   color: #ffe7d7;
-  font-size: 29px;
+  font-size: 140%;
   font-family: "DaunPenh",Arial,sans-serif;
   font-weight: 600;
   height: 30px;
@@ -177,9 +181,11 @@ margin-right: 5px;
 }
 
 //iteam
+.item-wrap{
+  padding: 10px 5px;  
+}
 .item{
   width: auto;
-  margin:20px 5px; 
   overflow: hidden;
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
@@ -304,6 +310,7 @@ margin-right: 5px;
   border-bottom: 1px solid #d3c0ab;
   overflow: hidden;
   padding: 10px;
+  margin: 0 5px;
   color: #333232;
   .id{
     background: #3d2f20;

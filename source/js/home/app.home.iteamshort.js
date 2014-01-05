@@ -1,6 +1,6 @@
 enyo.kind({
 	name: "App.Home.IteamShort",
-	kind: enyo.Control,
+	kind: "enyo.Control",
 	published:{
 		pic:"",
 		id:"",
@@ -9,22 +9,24 @@ enyo.kind({
 		time:""
 	},
 	tag: "div", 
-	classes:"item",
+	classes:"item-wrap",
 	components: [
-		{tag:'img',name:"pic",classes:"pic",src:"#"},
-		{tag:'div',classes:"info",components:[
-			{tag:'div',classes:'top',components:[
-				{tag:'span',name:'id',classes:'id'},
-				{tag:'span',name:'lotname',classes:'lotname'}
-			]},
-			{tag:'div',classes:'middle',content:"Current Bid:",components:[
-				{tag:'span',name:'amount',classes:'amount'},
-				{tag:'span',name:'time',classes:'time'}
-			]},
-			{tag:'div',classes:'bottom',components:[
-				{tag:'a',name:'history',classes:'history fi-clock',content:'Bid History'},
-				{tag:'a',name:'watchlist',classes:'watchlist fi-eye',content:'Add to my Watchlis'},
-				{tag:'a',name:'bid',classes:'bid fi-order',content:'Bid',ontap:'bidTap'},
+		{tag:"div",classes:"item",components:[
+			{tag:'img',name:"pic",classes:"pic",src:"#"},
+			{tag:'div',classes:"info",components:[
+				{tag:'div',classes:'top',components:[
+					{tag:'span',name:'id',classes:'id'},
+					{tag:'span',name:'lotname',classes:'lotname'}
+				]},
+				{tag:'div',classes:'middle',content:"Current Bid:",components:[
+					{tag:'span',name:'amount',classes:'amount'},
+					{tag:'span',name:'time',classes:'time'}
+				]},
+				{tag:'div',classes:'bottom',components:[
+					{tag:'a',name:'history',classes:'history fi-clock',content:'Bid History'},
+					{tag:'a',name:'watchlist',classes:'watchlist fi-eye',content:'Add to my Watchlis'},
+					{tag:'a',name:'bid',classes:'bid fi-order',content:'Bid',ontap:'bidTap'},
+				]}
 			]}
 		]}
 	],

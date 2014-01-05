@@ -1,24 +1,22 @@
 enyo.kind({
 	name: "App.Finder",
-	kind: enyo.Control,
-	fit: true,
-	tag:'div',
-	classes:'main-wrap',
+	kind: "FittableRows",
+	classes:'main-wrap enyo-fit enyo-unselectable',
 	create: function() { 
 		this.inherited(arguments);
 		this.displayIteams();
   },
 	components:[
-		{tag:"div",classes:"toolbar", components: [
+		{kind: "onyx.Toolbar", components: [
 			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
 				{tag:'span',classes:"nav-icon"}
 			]},
 			{tag:'h1',name:"heading",classes:"heading",content:"Barrel Lot Finder"},
 			{tag:'div',classes:"clear"}
 		]},
-		{tag:"div",classes:"inner-wrap",components:[
-			{kind: "enyo.Scroller", fit: true, components: [
-				{kind:App.Nav, name:'side',classes:'side-wrap'},
+		{kind:App.Nav, name:'side',classes:'side-wrap'},
+		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  components: [
+			{kind: "Scroller", horizontal:'hidden', classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,fit: true, components: [
 				{tag:"input",name:"q",classes:"q fi-search",attributes: 
 					{type: "search",placeholder:"Enter term.."}
 				},
