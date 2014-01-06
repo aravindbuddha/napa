@@ -1,3 +1,3 @@
 enyo.depends(
-	"app.iteam.js"
+	"app.Item.js"
 );

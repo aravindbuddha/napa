@@ -1,10 +1,11 @@
 enyo.kind({
 	name: "App.Finder",
-	kind: "FittableRows",
-	classes:'main-wrap enyo-fit enyo-unselectable',
+	kind: enyo.Control,
+  layoutKind: "FittableRowsLayout",
+	classes:'main-wrap enyo-fit finder enyo-unselectable',
 	create: function() { 
 		this.inherited(arguments);
-		this.displayIteams();
+		//this.displayItems();
   },
 	components:[
 		{kind: "onyx.Toolbar", components: [
@@ -15,12 +16,23 @@ enyo.kind({
 			{tag:'div',classes:"clear"}
 		]},
 		{kind:App.Nav, name:'side',classes:'side-wrap'},
+		{tag:'div',classes:"inner-wrap",components:[
+			{kind: "onyx.InputDecorator",classes:"finder-search",components: [
+				{tag:"div", classes:"fi-search"},
+		    {kind: "onyx.Input",name:"q",classes:"q", placeholder: "Enter some text...", onchange: "search"}
+			]}
+		]},
 		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  components: [
 			{kind: "Scroller", horizontal:'hidden', classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,fit: true, components: [
-				{tag:"input",name:"q",classes:"q fi-search",attributes: 
-					{type: "search",placeholder:"Enter term.."}
-				},
-				{name:"main",allowHtml: true}
+				{kind: "List", onSetupItem: "setupItem",name:"main",classes:"inner-wrap",allowHtml: true,components:[
+					{kind:"FittableColumns",ontap:"itemTap",components:[
+						{tag:'div',name:"id",classes:"id"},
+						{tag:'div',classes:"info",components:[
+							{tag:'b',name:'lotname',classes:'lotname'},
+							{tag:'span',name:'desc',classes:'desc'}
+						]}
+					]}
+				]}
 			]}
 		]}
 	],
@@ -34,24 +46,29 @@ enyo.kind({
 			nav.attributes.isActive=false;
 		}
 	},
-	getData:function(){ 
-		var base=this,xhr;
-		//set up enyo.AjaxProperties the enyo.Ajax constructor
-    xhr = new enyo.Ajax({url: "source/js/db.json"});
-    xhr.response(enyo.bind(this, "processResults"));
-		xhr.go();
+	setupItem:function(){ alert("hi");
+		this.setContentData(app.db.items);
+		return true;
 	},
-	displayIteams: function() { 
+	setContentData:function(item){
+		this.$.id.setContent(item.id);
+		this.$.lotname.setContent(item.lotname);
+		this.$.desc.setContent(item.desc);
+	},
+	search:function(){
+
+	},
+	displayItems: function() { 
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		app.db.items.forEach(function(iteam){
+		app.db.items.forEach(function(Item){
 			l.createComponent({
-				kind: App.Finder.IteamList,
+				kind: App.Finder.ItemList,
 				container: main,
-				id:iteam.id,
-				lotname:iteam.lotName,
-				desc:iteam.desc.substr(0,64)+"..."
+				id:Item.id,
+				lotname:Item.lotName,
+				desc:Item.desc.substr(0,64)+"..."
 			});
 		});
 		this.$.main.render();

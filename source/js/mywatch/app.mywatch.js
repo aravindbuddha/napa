@@ -7,7 +7,7 @@ enyo.kind({
 	classes:'main-wrap',
 	create: function() { 
 		this.inherited(arguments);
-		this.displayIteams();
+		this.displayItems();
   },
 	components:[
 		{tag:"div",classes:"toolbar", components: [
@@ -39,18 +39,18 @@ enyo.kind({
 			nav.attributes.isActive=false;
 		}
 	},
-	displayIteams: function(inRequest, inResponse) { 
+	displayItems: function(inRequest, inResponse) { 
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		app.db.items.forEach(function(iteam){
+		app.db.items.forEach(function(Item){
 			l.createComponent({
-				kind: App.MyWatch.IteamList,
+				kind: App.MyWatch.ItemList,
 				container: main,
-				id:"#"+iteam.id+" ",
-				lotname:iteam.lotName.substring(0,6)+"...",
-				amount:iteam.amount,
-				time:iteam.time
+				id:"#"+Item.id+" ",
+				lotname:Item.lotName.substring(0,6)+"...",
+				amount:Item.amount,
+				time:Item.time
 			});
 		});
 

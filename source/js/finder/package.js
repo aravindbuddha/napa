@@ -1,4 +1,4 @@
 enyo.depends(
 	"app.finder.js",
-	"app.finder.iteamlist.js"
+	"app.finder.Itemlist.js"
 );

@@ -1,6 +1,7 @@
 enyo.kind({
 	name: "App.Home",
-	kind: "FittableRows",
+ 	kind: enyo.Control,
+  layoutKind: "FittableRowsLayout",
 	classes:'main-wrap enyo-fit enyo-unselectable',
 	components:[
 		{kind: "onyx.Toolbar", components: [
@@ -12,12 +13,14 @@ enyo.kind({
 		]},
 	  {kind:App.Nav, name:'side',classes:'side-wrap'},
 		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  components: [
-			{kind: "Scroller", classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,name:"main", allowHtml: true}
+			{kind: "Scroller", classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,components:[
+				{kind: "FittableRows",name:"main", allowHtml: true}
+			]}
 		]}
 	],
 	create: function() {
 		this.inherited(arguments);
-		this.displayIteams();
+		this.displayItems();
   },
 	navIconTap: function(inSender, inEvent) {
 		var nav=this.$.navIcon;
@@ -36,20 +39,20 @@ enyo.kind({
     xhr.response(enyo.bind(this, "processResults"));
 		xhr.go();
 	},
-	displayIteams: function() { 
+	displayItems: function() { 
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
 		
-		app.db.items.forEach(function(iteam){
+		app.db.items.forEach(function(Item){
 			l.createComponent({
-				kind: App.Home.IteamShort,
+				kind: App.Home.ItemShort,
 				container: main,
-				pic:iteam.pic,
-				id:iteam.id,
-				lotname:iteam.lotName,
-				amount:iteam.amount,
-				time:iteam.time
+				pic:Item.pic,
+				id:Item.id,
+				lotname:Item.lotName,
+				amount:Item.amount,
+				time:Item.time
 			});
 		});
 		this.$.main.render();

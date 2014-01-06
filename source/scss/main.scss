@@ -51,13 +51,6 @@ a {
   color: #F6F6F6;
   background: #010101;
 }
-input{
-  width: 100%;
-  padding: 10px;
-  margin: 10px 5px;
-  border-radius: 4px;
-}
-
 .clear {
   clear: both;
 }
@@ -66,7 +59,7 @@ input{
   margin: 0 auto;
 }
 .inner-wrap{
-  padding: 0px 5px;
+  padding: 10px;
 }
 .scroll-panal{
   position: relative;
@@ -180,7 +173,7 @@ margin-right: 5px;
   border-bottom: 0;
 }
 
-//iteam
+//item
 .item-wrap{
   padding: 10px 5px;  
 }
@@ -192,15 +185,12 @@ margin-right: 5px;
   img{
     float: left;
     min-width: 77px;
-    width: 25%;
-
   }
   .info{
     span{
       display: inline-block;
     }
-    float:left;
-    width: 75%;
+ 
     .top{
       height: 36px;
       overflow: hidden;
@@ -257,6 +247,7 @@ margin-right: 5px;
     text-align: center;
     width: 20%;
     padding: 0 2%;
+    cursor: pointer;
   }
   .lotname{
     background: #f7bf46;
@@ -266,6 +257,7 @@ margin-right: 5px;
     float: left;
     width: 80%;
     color: #fff;
+    cursor: pointer;
   }
   .amount{
     background: #f7f4ed;
@@ -300,9 +292,19 @@ margin-right: 5px;
 #find_main{
   border:1px solid #d1d1d1;
 }
-
-.q{
-
+.finder{
+  .fi-search{
+    color: #333;
+    margin-right: 10px;
+  }
+  .finder-search{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+  }  
 }
 
 .finder-item{
@@ -315,19 +317,16 @@ margin-right: 5px;
   .id{
     background: #3d2f20;
     color: #ff8a15;
-    float: left;
-    padding: 5%;
+    margin-right: 10px;
+    padding: 20px;
     font-weight: bold;
-    width: 20%;
+    float: left;
   }
   .info{
-    float: left;
-    width: 80%;
-    padding-left: 10px;
     line-height: 14px;
     .lotname{
       display: block;
-      font-size: 14px;
+      font-size: percentage(14/16);
     }
     .desc{
       color: #9e9d9d;
@@ -375,13 +374,13 @@ margin-right: 5px;
    }
 }
 
-/*iteam */
-.iteam-head{
+/*item */
+.item-head{
   font-weight: normal;
   text-align: center;
   float: none;
 }
-.iteam-full{
+.item-full{
   .pic{
     width: 100%;
   }
@@ -392,7 +391,7 @@ margin-right: 5px;
   .viewmore{
     float: right;
   }
-  .iteam-bid-btn{
+  .bid-btn{
     width: 100%;
     padding: 10px;
     background: #f7bf46;

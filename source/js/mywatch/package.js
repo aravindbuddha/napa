@@ -1,4 +1,4 @@
 enyo.depends(
 	"app.mywatch.js",
-	"app.mywatch.iteamlist.js"
+	"app.mywatch.Itemlist.js"
 );

@@ -223,30 +223,22 @@ a:visited, a:hover, a:active {
 }
 
 /* line 54, ../scss/main.scss */
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 5px;
-  border-radius: 4px;
-}
-
-/* line 61, ../scss/main.scss */
 .clear {
   clear: both;
 }
 
-/* line 64, ../scss/main.scss */
+/* line 57, ../scss/main.scss */
 .main-wrap {
   width: 100%;
   margin: 0 auto;
 }
 
-/* line 68, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 .inner-wrap {
-  padding: 0px 5px;
+  padding: 10px;
 }
 
-/* line 71, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .scroll-panal {
   position: relative;
 }
@@ -254,7 +246,7 @@ input {
 /*****************************
 	--> Onyx OverWrite
 ******************************/
-/* line 79, ../scss/main.scss */
+/* line 72, ../scss/main.scss */
 .toolbar {
   background: #3d2f20;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -268,7 +260,7 @@ input {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 91, ../scss/main.scss */
+/* line 84, ../scss/main.scss */
 .nav-icon-wrap {
   cursor: pointer;
   display: block;
@@ -276,7 +268,7 @@ input {
   float: left;
 }
 
-/* line 97, ../scss/main.scss */
+/* line 90, ../scss/main.scss */
 .nav-icon, .nav-icon:before, .nav-icon:after {
   width: 20px;
   height: 3px;
@@ -284,7 +276,7 @@ input {
   background: #fff;
 }
 
-/* line 103, ../scss/main.scss */
+/* line 96, ../scss/main.scss */
 .nav-icon {
   cursor: pointer;
   float: left;
@@ -293,23 +285,23 @@ input {
   margin-right: 5px;
 }
 
-/* line 110, ../scss/main.scss */
+/* line 103, ../scss/main.scss */
 .nav-icon:before, .nav-icon:after {
   content: "";
   position: absolute;
 }
 
-/* line 114, ../scss/main.scss */
+/* line 107, ../scss/main.scss */
 .nav-icon:before {
   top: -7px;
 }
 
-/* line 117, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 .nav-icon:after {
   top: 7px;
 }
 
-/* line 121, ../scss/main.scss */
+/* line 114, ../scss/main.scss */
 .heading {
   float: left;
   color: #ffe7d7;
@@ -319,7 +311,7 @@ input {
   height: 30px;
 }
 
-/* line 129, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 .side-wrap {
   background: #282421;
   /* Old browsers */
@@ -338,7 +330,7 @@ input {
   /* IE6-9 */
 }
 
-/* line 138, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 .side-wrap {
   max-width: 300px;
   height: 100%;
@@ -349,12 +341,12 @@ input {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 19px;
 }
-/* line 148, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .side-wrap.active {
   left: 0;
 }
 
-/* line 153, ../scss/main.scss */
+/* line 146, ../scss/main.scss */
 .side-nav li {
   padding: 5px;
   padding-left: 20px;
@@ -363,83 +355,77 @@ input {
   border-top: 1px solid #3a362d;
 }
 
-/* line 160, ../scss/main.scss */
+/* line 153, ../scss/main.scss */
 .side-nav [class*=" fi-"]::before {
   font-style: 20px;
   padding-right: 15px;
   color: #ff8a16;
 }
 
-/* line 165, ../scss/main.scss */
+/* line 158, ../scss/main.scss */
 .side-nav .fi-label[class*=" fi-"]::before {
   color: #f6ca35;
 }
 
-/* line 170, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 .side-nav li.fi-label {
   color: #888;
 }
-/* line 173, ../scss/main.scss */
+/* line 166, ../scss/main.scss */
 .side-nav li.fi-user, .side-nav li.fi-label {
   background: #070506;
   border: 0;
 }
 
-/* line 179, ../scss/main.scss */
+/* line 172, ../scss/main.scss */
 .side-nav li:last-child {
   border-bottom: 0;
 }
 
-/* line 184, ../scss/main.scss */
+/* line 177, ../scss/main.scss */
 .item-wrap {
   padding: 10px 5px;
 }
 
-/* line 187, ../scss/main.scss */
+/* line 180, ../scss/main.scss */
 .item {
   width: auto;
   overflow: hidden;
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
 }
-/* line 192, ../scss/main.scss */
+/* line 185, ../scss/main.scss */
 .item img {
   float: left;
   min-width: 77px;
-  width: 25%;
 }
-/* line 198, ../scss/main.scss */
-.item .info {
-  float: left;
-  width: 75%;
-}
-/* line 199, ../scss/main.scss */
+/* line 190, ../scss/main.scss */
 .item .info span {
   display: inline-block;
 }
-/* line 204, ../scss/main.scss */
+/* line 194, ../scss/main.scss */
 .item .info .top {
   height: 36px;
   overflow: hidden;
 }
-/* line 208, ../scss/main.scss */
+/* line 198, ../scss/main.scss */
 .item .info .middle {
   height: 33px;
   overflow: hidden;
   color: #4f4438;
   text-align: center;
 }
-/* line 213, ../scss/main.scss */
+/* line 203, ../scss/main.scss */
 .item .info .middle span {
   border-right: 1px solid #d6cdc4;
 }
-/* line 217, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 .item .info .bottom {
   height: 35px;
   overflow: hidden;
   border-top: 1px solid #d6cdc4;
 }
-/* line 221, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
   text-decoration: none;
@@ -456,7 +442,7 @@ input {
   top: -5px;
   padding-top: 6px;
 }
-/* line 236, ../scss/main.scss */
+/* line 226, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -470,7 +456,7 @@ input {
   left: 10%;
 }
 
-/* line 253, ../scss/main.scss */
+/* line 243, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -478,8 +464,9 @@ input {
   text-align: center;
   width: 20%;
   padding: 0 2%;
+  cursor: pointer;
 }
-/* line 261, ../scss/main.scss */
+/* line 252, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -488,8 +475,9 @@ input {
   float: left;
   width: 80%;
   color: #fff;
+  cursor: pointer;
 }
-/* line 270, ../scss/main.scss */
+/* line 262, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -497,18 +485,18 @@ input {
   width: 60%;
   text-align: center;
 }
-/* line 277, ../scss/main.scss */
+/* line 269, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 284, ../scss/main.scss */
+/* line 276, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 287, ../scss/main.scss */
+/* line 279, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
@@ -517,12 +505,27 @@ input {
 }
 
 /*Finder Classes*/
-/* line 300, ../scss/main.scss */
+/* line 292, ../scss/main.scss */
 #find_main {
   border: 1px solid #d1d1d1;
 }
 
-/* line 308, ../scss/main.scss */
+/* line 296, ../scss/main.scss */
+.finder .fi-search {
+  color: #333;
+  margin-right: 10px;
+}
+/* line 300, ../scss/main.scss */
+.finder .finder-search {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+
+/* line 310, ../scss/main.scss */
 .finder-item {
   background: #fff;
   border-bottom: 1px solid #d3c0ab;
@@ -531,40 +534,37 @@ input {
   margin: 0 5px;
   color: #333232;
 }
-/* line 315, ../scss/main.scss */
+/* line 317, ../scss/main.scss */
 .finder-item .id {
   background: #3d2f20;
   color: #ff8a15;
-  float: left;
-  padding: 5%;
+  margin-right: 10px;
+  padding: 20px;
   font-weight: bold;
-  width: 20%;
-}
-/* line 323, ../scss/main.scss */
-.finder-item .info {
   float: left;
-  width: 80%;
-  padding-left: 10px;
+}
+/* line 325, ../scss/main.scss */
+.finder-item .info {
   line-height: 14px;
 }
-/* line 328, ../scss/main.scss */
+/* line 327, ../scss/main.scss */
 .finder-item .info .lotname {
   display: block;
-  font-size: 14px;
+  font-size: 87.5%;
 }
-/* line 332, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .finder-item .info .desc {
   color: #9e9d9d;
   font-size: 12px;
 }
 
 /*MyWatch Classes*/
-/* line 340, ../scss/main.scss */
+/* line 339, ../scss/main.scss */
 .headder {
   background: #c98d23;
   margin-top: 10px;
 }
-/* line 343, ../scss/main.scss */
+/* line 342, ../scss/main.scss */
 .headder b {
   text-align: center;
   font-weight: normal;
@@ -573,7 +573,7 @@ input {
   display: inline-block;
 }
 
-/* line 352, ../scss/main.scss */
+/* line 351, ../scss/main.scss */
 .watchlist-item {
   border: 1px solid #d1d1d1;
   border-top: 0;
@@ -581,21 +581,21 @@ input {
   color: #3d2f20;
   padding: 10px;
 }
-/* line 358, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 .watchlist-item a {
   color: #ff8a15;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 362, ../scss/main.scss */
+/* line 361, ../scss/main.scss */
 .watchlist-item a:hover {
   color: #ff8a15;
 }
-/* line 366, ../scss/main.scss */
+/* line 365, ../scss/main.scss */
 .watchlist-item > span {
   padding-left: 5%;
 }
-/* line 369, ../scss/main.scss */
+/* line 368, ../scss/main.scss */
 .watchlist-item button {
   margin-left: 5%;
   background: #f7bf46;
@@ -604,36 +604,36 @@ input {
   cursor: pointer;
 }
 
-/*iteam */
-/* line 379, ../scss/main.scss */
-.iteam-head {
+/*item */
+/* line 378, ../scss/main.scss */
+.item-head {
   font-weight: normal;
   text-align: center;
   float: none;
 }
 
-/* line 385, ../scss/main.scss */
-.iteam-full .pic {
+/* line 384, ../scss/main.scss */
+.item-full .pic {
   width: 100%;
 }
-/* line 388, ../scss/main.scss */
-.iteam-full .desc {
+/* line 387, ../scss/main.scss */
+.item-full .desc {
   color: #333232;
   padding: 10px;
 }
-/* line 392, ../scss/main.scss */
-.iteam-full .viewmore {
+/* line 391, ../scss/main.scss */
+.item-full .viewmore {
   float: right;
 }
-/* line 395, ../scss/main.scss */
-.iteam-full .iteam-bid-btn {
+/* line 394, ../scss/main.scss */
+.item-full .bid-btn {
   width: 100%;
   padding: 10px;
   background: #f7bf46;
   text-align: center;
 }
 
-/* line 402, ../scss/main.scss */
+/* line 401, ../scss/main.scss */
 .amountBtn, .addWatchBtn {
   width: 48%;
   padding: 10px;
@@ -641,18 +641,18 @@ input {
   border-bottom: 2px solid #ccc6c2;
 }
 
-/* line 408, ../scss/main.scss */
+/* line 407, ../scss/main.scss */
 .amountBtn {
   margin-right: 2%;
 }
 
-/* line 411, ../scss/main.scss */
+/* line 410, ../scss/main.scss */
 .addWatchBtn {
   margin-left: 2%;
   background: #f7bf46;
   position: relative;
 }
-/* line 415, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 .addWatchBtn:before {
   position: absolute;
   right: 10%;
