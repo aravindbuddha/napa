@@ -4,7 +4,7 @@
     "items": [
         {
             "id": 302,
-            "lotName": "Acacia Vineyard",
+            "lotName": "Aravind",
             "amount": "2500",
             "pic": "source/wine/btl_1.png",
             "time": "6hrs 20m",
@@ -55,7 +55,15 @@
         {
             "id": 1,
             "username": "Ryan Murphy",
-            "usertag": "1525",
+            "paddleId": "1525",
+            "location":"Westboro, MA",
+            "watchlist": "302,303,304,305,306,307"
+        },
+        {
+            "id": 2,
+            "username": "Aravind B",
+            "paddleId": "1425",
+            "location":"Vizag, IN",
             "watchlist": "302,303,304,305,306,307"
         }
     ],
@@ -63,56 +71,56 @@
         {
             "id": 1,
             "lotId": "302",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 2,
             "lotId": "303",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 3,
             "lotId": "304",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 4,
             "lotId": "305",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 6,
             "lotId": "306",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 7,
             "lotId": "302",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 8,
             "lotId": "302",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 9,
             "lotId": "302",
-            "userId": "1525",
+            "paddleId": "1525",
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         }

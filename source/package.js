@@ -6,5 +6,6 @@ enyo.depends(
 	"js/finder",
 	"js/mywatch",
 	"js/iteam",
+	"js/history",
 	"js/init.js"
 );

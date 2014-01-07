@@ -101,9 +101,11 @@ a:visited, a:hover, a:active {
   display: block;
   height: 30px;
   float: left;
+  color: #fff;
+  text-decoration: none;
 }
 
-/* line 90, ../scss/main.scss */
+/* line 92, ../scss/main.scss */
 .nav-icon, .nav-icon:before, .nav-icon:after {
   width: 20px;
   height: 3px;
@@ -111,7 +113,7 @@ a:visited, a:hover, a:active {
   background: #fff;
 }
 
-/* line 96, ../scss/main.scss */
+/* line 98, ../scss/main.scss */
 .nav-icon {
   cursor: pointer;
   float: left;
@@ -120,23 +122,23 @@ a:visited, a:hover, a:active {
   margin-right: 5px;
 }
 
-/* line 103, ../scss/main.scss */
+/* line 105, ../scss/main.scss */
 .nav-icon:before, .nav-icon:after {
   content: "";
   position: absolute;
 }
 
-/* line 107, ../scss/main.scss */
+/* line 109, ../scss/main.scss */
 .nav-icon:before {
   top: -7px;
 }
 
-/* line 110, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 .nav-icon:after {
   top: 7px;
 }
 
-/* line 114, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
 .heading {
   float: left;
   color: #ffe7d7;
@@ -146,7 +148,7 @@ a:visited, a:hover, a:active {
   height: 30px;
 }
 
-/* line 122, ../scss/main.scss */
+/* line 124, ../scss/main.scss */
 .side-wrap {
   background: #282421;
   /* Old browsers */
@@ -165,7 +167,7 @@ a:visited, a:hover, a:active {
   /* IE6-9 */
 }
 
-/* line 131, ../scss/main.scss */
+/* line 133, ../scss/main.scss */
 .side-wrap {
   max-width: 300px;
   height: 100%;
@@ -176,12 +178,12 @@ a:visited, a:hover, a:active {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 19px;
 }
-/* line 141, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 .side-wrap.active {
   left: 0;
 }
 
-/* line 146, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 .side-nav li {
   padding: 5px;
   padding-left: 20px;
@@ -190,77 +192,77 @@ a:visited, a:hover, a:active {
   border-top: 1px solid #3a362d;
 }
 
-/* line 153, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
 .side-nav [class*=" fi-"]::before {
   font-style: 20px;
   padding-right: 15px;
   color: #ff8a16;
 }
 
-/* line 158, ../scss/main.scss */
+/* line 160, ../scss/main.scss */
 .side-nav .fi-label[class*=" fi-"]::before {
   color: #f6ca35;
 }
 
-/* line 163, ../scss/main.scss */
+/* line 165, ../scss/main.scss */
 .side-nav li.fi-label {
   color: #888;
 }
-/* line 166, ../scss/main.scss */
+/* line 168, ../scss/main.scss */
 .side-nav li.fi-user, .side-nav li.fi-label {
   background: #070506;
   border: 0;
 }
 
-/* line 172, ../scss/main.scss */
+/* line 174, ../scss/main.scss */
 .side-nav li:last-child {
   border-bottom: 0;
 }
 
-/* line 177, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 .item-wrap {
   padding: 10px 5px;
 }
 
-/* line 180, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 .item {
   width: auto;
   overflow: hidden;
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
 }
-/* line 185, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 .item img {
   float: left;
   min-width: 77px;
 }
-/* line 190, ../scss/main.scss */
+/* line 192, ../scss/main.scss */
 .item .info span {
   display: inline-block;
 }
-/* line 194, ../scss/main.scss */
+/* line 196, ../scss/main.scss */
 .item .info .top {
   height: 36px;
   overflow: hidden;
 }
-/* line 198, ../scss/main.scss */
+/* line 200, ../scss/main.scss */
 .item .info .middle {
   height: 33px;
   overflow: hidden;
   color: #4f4438;
   text-align: center;
 }
-/* line 203, ../scss/main.scss */
+/* line 205, ../scss/main.scss */
 .item .info .middle span {
   border-right: 1px solid #d6cdc4;
 }
-/* line 207, ../scss/main.scss */
+/* line 209, ../scss/main.scss */
 .item .info .bottom {
   height: 35px;
   overflow: hidden;
   border-top: 1px solid #d6cdc4;
 }
-/* line 211, ../scss/main.scss */
+/* line 213, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
   text-decoration: none;
@@ -277,7 +279,7 @@ a:visited, a:hover, a:active {
   top: -5px;
   padding-top: 6px;
 }
-/* line 226, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -291,7 +293,7 @@ a:visited, a:hover, a:active {
   left: 10%;
 }
 
-/* line 243, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -301,7 +303,7 @@ a:visited, a:hover, a:active {
   padding: 0 2%;
   cursor: pointer;
 }
-/* line 252, ../scss/main.scss */
+/* line 254, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -312,7 +314,7 @@ a:visited, a:hover, a:active {
   color: #fff;
   cursor: pointer;
 }
-/* line 262, ../scss/main.scss */
+/* line 264, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -320,18 +322,18 @@ a:visited, a:hover, a:active {
   width: 60%;
   text-align: center;
 }
-/* line 269, ../scss/main.scss */
+/* line 271, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 276, ../scss/main.scss */
+/* line 278, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 279, ../scss/main.scss */
+/* line 281, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
@@ -340,17 +342,17 @@ a:visited, a:hover, a:active {
 }
 
 /*Finder Classes*/
-/* line 292, ../scss/main.scss */
+/* line 294, ../scss/main.scss */
 #find_main {
   border: 1px solid #d1d1d1;
 }
 
-/* line 296, ../scss/main.scss */
+/* line 298, ../scss/main.scss */
 .finder .fi-search {
   color: #333;
   margin-right: 10px;
 }
-/* line 300, ../scss/main.scss */
+/* line 302, ../scss/main.scss */
 .finder .finder-search {
   width: 100%;
   padding: 10px;
@@ -360,7 +362,7 @@ a:visited, a:hover, a:active {
   background-color: #ffffff;
 }
 
-/* line 310, ../scss/main.scss */
+/* line 312, ../scss/main.scss */
 .finder-item {
   background: #fff;
   border-bottom: 1px solid #d3c0ab;
@@ -368,8 +370,9 @@ a:visited, a:hover, a:active {
   padding: 10px;
   margin: 0 5px;
   color: #333232;
+  cursor: pointer;
 }
-/* line 317, ../scss/main.scss */
+/* line 321, ../scss/main.scss */
 .finder-item .id {
   background: #3d2f20;
   color: #ff8a15;
@@ -378,28 +381,28 @@ a:visited, a:hover, a:active {
   font-weight: bold;
   float: left;
 }
-/* line 325, ../scss/main.scss */
+/* line 329, ../scss/main.scss */
 .finder-item .info {
   line-height: 14px;
 }
-/* line 327, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .finder-item .info .lotname {
   display: block;
   font-size: 87.5%;
 }
-/* line 331, ../scss/main.scss */
+/* line 335, ../scss/main.scss */
 .finder-item .info .desc {
   color: #9e9d9d;
   font-size: 12px;
 }
 
 /*MyWatch Classes*/
-/* line 339, ../scss/main.scss */
+/* line 343, ../scss/main.scss */
 .headder {
   background: #c98d23;
   margin-top: 10px;
 }
-/* line 342, ../scss/main.scss */
+/* line 346, ../scss/main.scss */
 .headder b {
   text-align: center;
   font-weight: normal;
@@ -408,7 +411,7 @@ a:visited, a:hover, a:active {
   display: inline-block;
 }
 
-/* line 351, ../scss/main.scss */
+/* line 355, ../scss/main.scss */
 .watchlist-item {
   border: 1px solid #d1d1d1;
   border-top: 0;
@@ -416,21 +419,21 @@ a:visited, a:hover, a:active {
   color: #3d2f20;
   padding: 10px;
 }
-/* line 357, ../scss/main.scss */
+/* line 361, ../scss/main.scss */
 .watchlist-item a {
   color: #ff8a15;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 361, ../scss/main.scss */
+/* line 365, ../scss/main.scss */
 .watchlist-item a:hover {
   color: #ff8a15;
 }
-/* line 365, ../scss/main.scss */
+/* line 369, ../scss/main.scss */
 .watchlist-item > span {
   padding-left: 5%;
 }
-/* line 368, ../scss/main.scss */
+/* line 372, ../scss/main.scss */
 .watchlist-item button {
   margin-left: 5%;
   background: #f7bf46;
@@ -440,27 +443,27 @@ a:visited, a:hover, a:active {
 }
 
 /*item */
-/* line 378, ../scss/main.scss */
+/* line 382, ../scss/main.scss */
 .item-head {
   font-weight: normal;
   text-align: center;
   float: none;
 }
 
-/* line 384, ../scss/main.scss */
+/* line 388, ../scss/main.scss */
 .item-full .pic {
   width: 100%;
 }
-/* line 387, ../scss/main.scss */
+/* line 391, ../scss/main.scss */
 .item-full .desc {
   color: #333232;
   padding: 10px;
 }
-/* line 391, ../scss/main.scss */
+/* line 395, ../scss/main.scss */
 .item-full .viewmore {
   float: right;
 }
-/* line 394, ../scss/main.scss */
+/* line 398, ../scss/main.scss */
 .item-full .bid-btn {
   width: 100%;
   padding: 10px;
@@ -468,7 +471,7 @@ a:visited, a:hover, a:active {
   text-align: center;
 }
 
-/* line 401, ../scss/main.scss */
+/* line 405, ../scss/main.scss */
 .amountBtn, .addWatchBtn {
   width: 48%;
   padding: 10px;
@@ -476,18 +479,18 @@ a:visited, a:hover, a:active {
   border-bottom: 2px solid #ccc6c2;
 }
 
-/* line 407, ../scss/main.scss */
+/* line 411, ../scss/main.scss */
 .amountBtn {
   margin-right: 2%;
 }
 
-/* line 410, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 .addWatchBtn {
   margin-left: 2%;
   background: #f7bf46;
   position: relative;
 }
-/* line 414, ../scss/main.scss */
+/* line 418, ../scss/main.scss */
 .addWatchBtn:before {
   position: absolute;
   right: 10%;

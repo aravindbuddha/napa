@@ -1,11 +1,13 @@
 enyo.kind({
 	name: "App.Finder",
 	kind: enyo.Control,
+	db:"",
   layoutKind: "FittableRowsLayout",
 	classes:'main-wrap enyo-fit finder enyo-unselectable',
 	create: function() { 
 		this.inherited(arguments);
-		//this.displayItems();
+		this.db=app.db.items;
+		this.$.list.setCount(this.db.length);
   },
 	components:[
 		{kind: "onyx.Toolbar", components: [
@@ -19,23 +21,29 @@ enyo.kind({
 		{tag:'div',classes:"inner-wrap",components:[
 			{kind: "onyx.InputDecorator",classes:"finder-search",components: [
 				{tag:"div", classes:"fi-search"},
-		    {kind: "onyx.Input",name:"q",classes:"q", placeholder: "Enter some text...", onchange: "search"}
+		    {kind: "onyx.Input",name:"q",classes:"q", placeholder: "Enter some text...", oninput: "searchInputChange"}
 			]}
 		]},
-		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  components: [
-			{kind: "Scroller", horizontal:'hidden', classes: "enyo-fit", strategyKind: "TranslateScrollStrategy",  touch:true,fit: true, components: [
-				{kind: "List", onSetupItem: "setupItem",name:"main",classes:"inner-wrap",allowHtml: true,components:[
-					{kind:"FittableColumns",ontap:"itemTap",components:[
-						{tag:'div',name:"id",classes:"id"},
-						{tag:'div',classes:"info",components:[
-							{tag:'b',name:'lotname',classes:'lotname'},
-							{tag:'span',name:'desc',classes:'desc'}
-						]}
-					]}
-				]}
+		{kind: "Panels",classes:"scroll-panal", fit: true, draggable: false,  
+		components: [{
+				name:"list",
+				kind:"List",
+				classes: "enyo-fit", 
+				strategyKind: "TranslateScrollStrategy",  
+				touch:true,
+				onSetupItem: "setupItem",
+    		count: 5,
+    		fixedHeight: true,
+    		classes: "enyo-fit",
+				components:[
+				{name:"itemView",onclick:"itemTap",kind:"App.Finder.ItemList"}
 			]}
 		]}
 	],
+	itemTap:function(inSender, inEvent){
+		var item=new App.Item({"lotId":inSender.children[0].children[0].content});
+   	item.renderInto(document.body);
+	},
 	navIconTap: function(inSender, inEvent) {
 		var nav=this.$.navIcon;
 		if(!this.$.navIcon.attributes.isActive){
@@ -46,31 +54,33 @@ enyo.kind({
 			nav.attributes.isActive=false;
 		}
 	},
-	setupItem:function(){ alert("hi");
-		this.setContentData(app.db.items);
+	setupItem:function(inSender, inEvent){ 
+    var i = inEvent.index;
+    var data = this.filter ? this.filtered : this.db;
+	  var item = data[i];
+	  this.$.itemView.setContentData(item);
+	},
+	searchInputChange:function(inSender) {
+		enyo.job(this.id + ":search", this.bindSafely("filterList", inSender.getValue()), 200);
 		return true;
 	},
-	setContentData:function(item){
-		this.$.id.setContent(item.id);
-		this.$.lotname.setContent(item.lotname);
-		this.$.desc.setContent(item.desc);
+	filterList: function(inFilter) {
+		if (inFilter != this.filter) {
+			this.filter = inFilter;
+			this.filtered = this.generateFilteredData(inFilter);
+			this.$.list.setCount(this.filtered.length);
+			this.$.list.reset();
+		}
 	},
-	search:function(){
-
-	},
-	displayItems: function() { 
-		var l = new enyo.Control;
-		var main=this.$.main;
-		main.destroyClientControls();
-		app.db.items.forEach(function(Item){
-			l.createComponent({
-				kind: App.Finder.ItemList,
-				container: main,
-				id:Item.id,
-				lotname:Item.lotName,
-				desc:Item.desc.substr(0,64)+"..."
-			});
-		});
-		this.$.main.render();
+	generateFilteredData: function(inFilter) {
+		var re = new RegExp("^" + inFilter, "i");
+		var r = [];
+		for (var i=0, d; (d=this.db[i]); i++) {
+			if (d.lotName.match(re)) {
+				d.dbIndex = i;
+				r.push(d);
+			}
+		}
+		return r;
 	}
 });
