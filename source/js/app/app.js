@@ -18,12 +18,12 @@ enyo.kind({
     xhr = new enyo.Ajax({url: "source/js/db.json"});
     xhr.response(function(inRequest, inResponse){
     base.db=inResponse;
-   // var home=new App.Home();
-		//home.renderInto(document.body);
+    var home=new App.Home();
+		home.renderInto(document.body);
 		// var finder=new App.Finder();
 		// finder.renderInto(document.body);
-		 var history=new App.History();
-		 history.renderInto(document.body);
+		 //var history=new App.History();
+		 //history.renderInto(document.body);
     });
 		xhr.go();
 	},

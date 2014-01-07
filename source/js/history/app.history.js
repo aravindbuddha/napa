@@ -1,7 +1,7 @@
 enyo.kind({
 	name: "App.History",
 	kind: enyo.Control,
-	lotId:302,
+	lotId:"",
 	db:{},
 	fit: true,
 	tag:'div',
@@ -31,7 +31,8 @@ enyo.kind({
 		]}
 	],
 	navIconTap: function(inSender, inEvent) {
-		
+		var home=new App.Home();
+		home.renderInto(document.body);
 	},
 	displayItems: function(inRequest, inResponse) { 
 		console.log(app.getBidHistory(this.lotId));
