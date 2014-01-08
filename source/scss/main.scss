@@ -34,6 +34,7 @@ body {
 a {
   text-decoration: underline;
   color: #ff8a15;
+  cursor: pointer;
   &:link {
     text-decoration: none;
     -webkit-transition: all 0.35s ease-in-out 0s;
@@ -51,15 +52,23 @@ a {
   color: #F6F6F6;
   background: #010101;
 }
+button{
+  cursor: pointer;
+}
+
 .clear {
   clear: both;
 }
 .main-wrap{
   width: 100%;
   margin: 0 auto;
+  color: #333;
 }
 .inner-wrap{
   padding: 10px;
+}
+.inner-wrap-side{
+  padding: 0 10px;
 }
 .scroll-panal{
   position: relative;
@@ -68,6 +77,15 @@ a {
 /*****************************
 	--> Onyx OverWrite
 ******************************/
+.onyx-toolbar {
+  background: #3d2f20 !important;
+}
+.onyx-button{
+  background: #f7bf46;
+  text-align: center;
+  border-bottom: 2px solid #d6cec8;
+  cursor: pointer;
+}
 
 .toolbar {
   background: #3d2f20;
@@ -134,6 +152,7 @@ margin-right: 5px;
   max-width: 300px;
   height: 100%;
   z-index: 99;
+  color: #fff;
   @extend %brown-gredient-bg;
   box-shadow: 5px 0px 11px rgba(0, 0, 0, 0.5);
   position: fixed;
@@ -250,6 +269,7 @@ margin-right: 5px;
     width: 20%;
     padding: 0 2%;
     cursor: pointer;
+    color: #fff;
   }
   .lotname{
     background: #f7bf46;
@@ -296,7 +316,7 @@ margin-right: 5px;
 }
 .finder{
   .fi-search{
-    color: #333;
+    
     margin-right: 10px;
   }
   .finder-search{
@@ -343,6 +363,8 @@ margin-right: 5px;
 .headder{
   background: #c98d23 ;
   margin-top: 10px;
+  color: #fff;
+  text-align: center;
   b{
     text-align: center;
     font-weight: normal;
@@ -420,4 +442,116 @@ margin-right: 5px;
     right: 10%;
     top: 32%;
   }
+}
+
+/*Bidding*/
+.mask{
+  position: absolute;
+  background: #333;
+  z-index: 23;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  display: none;
+}
+.bidding{
+  .bid-btn {
+    width: 100%;
+    background: #f7bf46;
+    color: #333;
+    box-shadow: 0 3px 0px rgba(0,0,0,0.2);
+    padding: 8px;
+    border-radius: 0 !important;
+    border: 0;
+  }
+}
+.biding-row{
+  padding: 5px;
+  background: #fff;
+}
+.biding-row label{
+  width: 70%;
+  display: block;
+  float: left;
+}
+.biding-row input{
+  width: 30%;
+  border: 1px solid #d6d1cc;
+  padding: 5px;
+}
+
+.bidPopup{
+  margin: 10px;
+  text-align: center;
+  color: #333232 !important;
+  background: #fff !important;
+  padding: 25px !important;
+  button{
+    margin-top:10px !important; 
+    width: 48%;
+    @extend .yellow-btn;
+    &.confirm{
+      margin-left: 4%;
+    }
+  }
+}
+
+.history-list{
+  margin: 0 10px;
+}
+.history{
+  .headder{
+    padding: 10px;
+    b{
+      padding: 0;
+      width: auto;
+    }
+    b.amount{
+      padding: 0 2%;
+    }
+  }
+  
+}
+.history-items{
+   border: 1px solid #d1d1d1;
+   border-top: 0;
+   background: #fff;
+   color: #3d2f20;
+   padding: 10px;
+   overflow: hidden;
+
+   .idname{
+      width: 40%;
+   }
+   .amount{
+      width: 20%;
+   }
+   .time{
+      width: 40%;
+   }
+   a{
+    color: #ff8a15;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+      color: #ff8a15;
+    }
+   }
+   & > span{
+    
+    display: block;
+    float: left;
+
+    &:first-child{
+      padding: 0;
+    }
+    padding-left: 5%;
+   }
+   button{
+    margin-left: 5%;
+    background: #f7bf46;
+    padding:5px;
+    border-bottom: 2px solid #d6cec8;
+    cursor: pointer;
+   }
 }

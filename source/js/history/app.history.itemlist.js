@@ -8,33 +8,21 @@ enyo.kind({
 		time:""
 	},
 	tag: "div", 
-	classes:"watchlist-item",
+	classes:"history-items",
 	components: [
-		{tag:"span",name:"idname",components:[
+		{tag:"span",name:"idname",classes:"idname",components:[
 			{tag:"span",name:"paddleId"},
+      {tag:"br"},
 			{tag:"span",name:"location"}
 		]},
-		{tag:"span",name:"amount",content:"NIL"},
-		{tag:"span",name:"time",content:"NIL"}
+		{tag:"span",name:"amount",classes:"amount",content:"NIL"},
+		{tag:"span",name:"time",classes:"time",content:"NIL"}
 	],
-	create: function() {
-    this.inherited(arguments);
-    this.paddleIdChanged();
-    this.locationChanged();
-    this.amountChanged();
-    this.timeChanged();
-  },
-  paddleIdChanged:function(){
-  	this.$.paddleId.setContent(this.paddleId);
-  },
-  locationChanged:function(){
-  	this.$.location.setContent(this.location);
-  },
-  amountChanged:function(){
-  	this.$.amount.setContent(this.amount);
-  },
-  timeChanged:function(){
-  	this.$.time.setContent(this.time);
+  setContentData:function(item){ 
+    this.$.paddleId.setContent("Paddle #"+item.paddleId);
+    this.$.location.setContent("("+item.location+")");
+    this.$.amount.setContent("$"+item.amount);
+    this.$.time.setContent(item.time);
   }
 });
 

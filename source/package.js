@@ -5,7 +5,11 @@ enyo.depends(
 	"js/home",
 	"js/finder",
 	"js/mywatch",
-	"js/iteam",
+	"js/item",
 	"js/history",
+	"js/bidding",
+	"js/mybids",
+	"js/notifications",
+	"js/user",
 	"js/init.js"
 );

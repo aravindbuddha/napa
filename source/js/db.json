@@ -5,7 +5,8 @@
         {
             "id": 302,
             "lotName": "Aravind",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_1.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
@@ -13,7 +14,8 @@
         {
             "id": 303,
             "lotName": "Acacia Vineyard",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_2.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
@@ -21,7 +23,8 @@
         {
             "id": 304,
             "lotName": "Acacia Vineyard",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_3.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
@@ -29,7 +32,8 @@
         {
             "id": 305,
             "lotName": "Acacia Vineyard",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_4.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
@@ -37,7 +41,8 @@
         {
             "id": 306,
             "lotName": "Acacia Vineyard",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_4.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
@@ -45,7 +50,8 @@
         {
             "id": 307,
             "lotName": "Acacia Vineyard",
-            "amount": "2500",
+            "amount": 2500,
+            "minIncrement":250,
             "pic": "source/wine/btl_4.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"

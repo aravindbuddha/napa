@@ -15,7 +15,7 @@ enyo.kind({
 		]},
 	],
 	thingTap: function(inSender, inEvent) {
-	   alert('hi');
+	   
 	},
 	finderTap: function(inSender, inEvent){ 
 		var find=new App.Finder();

@@ -16,7 +16,7 @@ enyo.kind({
 		]},
 		{tag:"span",name:"amount",content:"NIL"},
 		{tag:"span",name:"time",content:"NIL"},
-		{tag:"button",name:"myWathBidBtn",content:"Bid"},
+		{tag:"button",name:"myWathBidBtn",ontap:"bidTap",content:"Bid"},
 
 	],
 	create: function() {
@@ -41,6 +41,11 @@ enyo.kind({
   itemTap:function() {
   	var Item=new App.Item({"lotId":this.$.id.getContent().slice(1)});
   	Item.renderInto(document.body);
-  }
+  },
+  bidTap:function(){ 
+    app.page="mywatch";
+    var bidding=new App.Bidding({"lotId":this.id.slice(1)});
+    bidding.renderInto(document.body);
+  },
 });
 

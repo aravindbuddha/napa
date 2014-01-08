@@ -59,7 +59,9 @@ enyo.kind({
   	history.renderInto(document.body);
   },
   bidTap:function(){ 
-
+  	app.page="home";
+  	var bidding=new App.Bidding({"lotId":this.$.id.getContent().slice(1)});
+		bidding.renderInto(document.body);
   },
  	ItemTap:function() {
   	var Item=new App.Item({"lotId":this.$.id.getContent().slice(1)});

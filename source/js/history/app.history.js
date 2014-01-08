@@ -2,13 +2,13 @@ enyo.kind({
 	name: "App.History",
 	kind: enyo.Control,
 	lotId:"",
-	db:{},
-	fit: true,
-	tag:'div',
-	classes:'main-wrap',
+  db:"",
+  layoutKind: "FittableRowsLayout",
+	classes:'main-wrap history enyo-fit finder enyo-unselectable',
 	create: function() { 
 		this.inherited(arguments);
-		this.displayItems();
+		this.db=app.getBidHistory(this.lotId);
+		this.$.list.setCount(this.db.length);
   },
 	components:[
 		{tag:"div",classes:"toolbar", components: [
@@ -18,18 +18,37 @@ enyo.kind({
 			{tag:'h1',name:"heading",classes:"heading",content:"Bid History"},
 			{tag:'div',classes:"clear"}
 		]},
-		{kind: "enyo.Scroller", fit: true, components: [
-			{kind:App.Nav, name:'side',classes:'side-wrap'},
-			{tag:"div",classes:"inner-wrap",components:[
-				{tag:'div',classes:'headder',components:[
-					{tag:'b',content:"Paddle Number"},
-					{tag:'b',content:"Bid amount"},
-					{tag:'b',content:"Date/Time"}
-				]},
-				{name:"main", allowHtml: true}
+		{kind:App.Nav, name:'side',classes:'side-wrap'},
+		{tag:"div",classes:"inner-wrap-side",components:[
+			{tag:'div',classes:'headder',components:[
+				{tag:'b',classes:"paddle-num",content:"Paddle Number"},
+				{tag:'b',classes:"amount",content:"Bid amount"},
+				{tag:'b',classes:"time",content:"Date/Time"}
+			]}
+		]},
+		{kind: "Panels",classes:"scroll-panal inner-wrap-side history-list", fit: true, draggable: false,  
+		components: [{
+				name:"list",
+				kind:"List",
+				classes: "enyo-fit", 
+				strategyKind: "TranslateScrollStrategy",  
+				touch:true,
+				onSetupItem: "setupItem",
+    		count: 5,
+    		fixedHeight: true,
+    		classes: "enyo-fit",
+				components:[
+				{name:"itemView",onclick:"itemTap",kind:"App.History.ItemList"}
 			]}
 		]}
 	],
+	setupItem:function(inSender, inEvent){ 
+	  var i = inEvent.index;
+	  var item = this.db[i];
+	  console.log(item);
+	  this.$.itemView.setContentData(item);
+	},
+
 	navIconTap: function(inSender, inEvent) {
 		var home=new App.Home();
 		home.renderInto(document.body);

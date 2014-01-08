@@ -31,7 +31,7 @@ enyo.kind({
 			]}
 		]},
 		{kind:"FittableRows",classes:"inner-wrap",components:[
-			{kind:"onyx.Button",classes:"bid-btn",name:"bidBtn",content:"Bid"}
+			{kind:"onyx.Button",ontap:"bidTap",classes:"bid-btn",name:"bidBtn",content:"Bid"}
 		]}
 	],
 	displayItem: function() { 
@@ -41,6 +41,12 @@ enyo.kind({
 		this.$.amount.setContent("Current Bid:$"+Item.amount);
 		this.$.desc.setContent(Item.desc.substring(0,360));
 	},
+	bidTap:function(){ 
+		app.page="item";
+		app.pageItemId=this.lotId;
+  	var bidding=new App.Bidding({"lotId":this.lotId});
+		bidding.renderInto(document.body);
+  },
 	viewMoreTap:function() {
 		this.$.desc.setContent(Item.desc);
 		this.$.viewmore.applyStyle('display','none');
