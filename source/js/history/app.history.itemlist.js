@@ -3,7 +3,7 @@ enyo.kind({
 	kind: enyo.Control,
 	published:{
 		paddleId:"",
-    location:"",
+    place:"",
 		amount:"",
 		time:""
 	},
@@ -11,16 +11,16 @@ enyo.kind({
 	classes:"history-items",
 	components: [
 		{tag:"span",name:"idname",classes:"idname",components:[
-			{tag:"span",name:"paddleId"},
+			{tag:"span",classes:"paddleId",name:"paddleId"},
       {tag:"br"},
-			{tag:"span",name:"location"}
+			{tag:"span",name:"place"}
 		]},
 		{tag:"span",name:"amount",classes:"amount",content:"NIL"},
 		{tag:"span",name:"time",classes:"time",content:"NIL"}
 	],
   setContentData:function(item){ 
     this.$.paddleId.setContent("Paddle #"+item.paddleId);
-    this.$.location.setContent("("+item.location+")");
+    this.$.place.setContent("("+item.place+")");
     this.$.amount.setContent("$"+item.amount);
     this.$.time.setContent(item.time);
   }

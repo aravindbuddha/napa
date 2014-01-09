@@ -8,11 +8,16 @@ enyo.kind({
 	create: function() { 
 		this.inherited(arguments);
 		this.db=app.getBidHistory(this.lotId);
-		this.$.list.setCount(this.db.length);
+		if(this.db.length < 10){
+			this.$.list.setCount(this.db.length);
+		}
+		else{
+			this.$.list.setCount(10);
+		}	
   },
 	components:[
 		{tag:"div",classes:"toolbar", components: [
-			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
+			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-back-icon-wrap",components:[
 				{tag:'span',classes:"nav-icon-back fi-left-arrow"}
 			]},
 			{tag:'h1',name:"heading",classes:"heading",content:"Bid History"},
@@ -22,7 +27,7 @@ enyo.kind({
 		{tag:"div",classes:"inner-wrap-side",components:[
 			{tag:'div',classes:'headder',components:[
 				{tag:'b',classes:"paddle-num",content:"Paddle Number"},
-				{tag:'b',classes:"amount",content:"Bid amount"},
+				{tag:'b',classes:"amount",content:"Bid Amount"},
 				{tag:'b',classes:"time",content:"Date/Time"}
 			]}
 		]},
@@ -34,12 +39,15 @@ enyo.kind({
 				strategyKind: "TranslateScrollStrategy",  
 				touch:true,
 				onSetupItem: "setupItem",
-    		count: 5,
+    		count: 10,
     		fixedHeight: true,
     		classes: "enyo-fit",
 				components:[
 				{name:"itemView",onclick:"itemTap",kind:"App.History.ItemList"}
 			]}
+		]},
+		{kind:"onyx.Groupbox",classes:"inner-wrap",components:[
+			{kind:"onyx.Button",ontap:"showAll",content:"Show All Bids",classes:"show-all-bids"}
 		]}
 	],
 	setupItem:function(inSender, inEvent){ 
@@ -48,7 +56,10 @@ enyo.kind({
 	  console.log(item);
 	  this.$.itemView.setContentData(item);
 	},
-
+	showAll:function(){
+		this.$.list.setCount(this.db.length);
+		this.$.list.reset();
+	},
 	navIconTap: function(inSender, inEvent) {
 		var home=new App.Home();
 		home.renderInto(document.body);
@@ -63,7 +74,7 @@ enyo.kind({
 				kind: App.History.ItemList,
 				container: main,
 				paddleId:"#"+Item.paddleId+" ",
-    		location:Item.location,
+    		place:Item.place,
 				amount:Item.amount,
 				time:Item.time
 			});

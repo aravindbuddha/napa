@@ -4,43 +4,48 @@ enyo.kind({
 	db:{},
 	page:"",
 	pageItemId:'',
-	paddleId:"",
+	paddleId:0,
 	constructor: function() { 
     this.getData();
-   // enyo.Scroller.touchScrolling = true;
   },
-  setUserId:function(id){
-  	this.userId=id;
-  },
-  getUserId:function() {
-  	return this.userId;
-  },
+  //The main db Initilazation function
 	getData:function(){ 
 		var base=this,xhr;
     xhr = new enyo.Ajax({url: "source/js/db.json"});
     xhr.response(function(inRequest, inResponse){
-    base.db=inResponse;
-    var home=new App.Home();
-		home.renderInto(document.body);
-		// var finder=new App.Finder();
-		// finder.renderInto(document.body);
-	  //var bidding=new App.Bidding();
-		//bidding.renderInto(document.body);
+    	base.db=inResponse;
+  		base.init();
     });
 		xhr.go();
 	},
+	//this is a app initilazation
+	init:function(){
+		if(this.paddleId){
+			var home=new App.Home();
+	    home.renderInto(document.body);
+		}
+		else{
+			var login=new App.UserLogin();
+	  	login.renderInto(document.body);	
+		}
+	},
+	//helper functions for bids
 	getBidHistory:function(lotId){ 
 		var data=[];
 		for (var i = 0; i < this.db.bids.length; i++) {
 			if(this.db.bids[i].lotId==lotId){
+				this.db.bids[i].place=this.getUserPlaceByPaddle(this.db.bids[i].paddleId);
 				data.push(this.db.bids[i]);
 			}
 		};
-		for (var i = 0; i < data.length; i++) {
-			var user=this.getUserByPaddle(data[i].paddleId);
-			data[i].location=user.location;
-		};
 		return data;
+	},
+	getUserPlaceByPaddle:function(paddleId){
+		for (var i = 0; i < this.db.users.length; i++) {
+			if(this.db.users[i].paddleId == paddleId){
+				return this.db.users[i].place;
+			}
+		};
 	},
 	getBidDetails:function(lotId){
 		var data={},max=0;
@@ -59,6 +64,7 @@ enyo.kind({
 		};
 		return data;
 	},
+	//helper functions for users
 	getUserByPaddle:function(paddleId){ 
 		for (var i = 0; i < this.db.users.length; i++) {
 			if(this.db.users[i].paddleId == paddleId){
@@ -66,6 +72,66 @@ enyo.kind({
 			}
 		};
 	},
+	getNotifications:function(){
+		var notes=[];
+		for (var i = 0; i < this.db.notifications.length; i++) {
+			if(this.db.notifications[i].paddleId== this.paddleId){
+				notes.push(this.db.notifications[i].msg);
+			}
+		};
+		return notes;
+	},
+	//helper functions for bids
+	getHighBid:function(lotId){
+		var max=0;
+		for (var i = 0; i < this.db.bids.length; i++) {
+			if(this.db.bids[i].lotId==lotId){
+				if(this.db.bids[i].amount > max){
+					max=this.db.bids[i].amount;
+				}
+			}
+		};
+		return max;
+	},
+	getMyBids:function(){
+		var items=[];
+		for (var i = 0; i < this.db.bids.length; i++) {
+			if(this.db.bids[i].paddleId==this.paddleId){
+				items.push({"lotId":this.db.bids[i].lotId});
+			}
+		};
+		for (var i = 0; i < items.length; i++) {
+			var item=this.getMyBidPositionAmount(items[i].lotId);
+			items[i].position=item.position;
+			items[i].amount=item.amount;
+			items[i].high=item.high;
+			items[i].lotName=this.getItem(items[i].lotId).lotName;
+		};
+		return items;
+	},
+	getMyBidPositionAmount:function(lotId){
+		var items=[];
+		for (var i = 0; i < this.db.bids.length; i++) {
+			if(this.db.bids[i].lotId== lotId){
+				items.push({
+					"amount":this.db.bids[i].amount,
+					"paddleId":this.db.bids[i].paddleId
+				});
+			}
+		};
+		items.sort(function(a, b) {
+		    var amountA = a.amount;
+		    var amountB = b.amount;
+		    return (amountA < amountB) ? -1 : (amountA > amountB) ? 1 : 0;
+		});
+		items.reverse();
+		for (var i = 0; i < items.length; i++) {
+			if(items[i].paddleId== this.paddleId){
+				return {"position":i+1,"amount":items[i].amount,"high":items[0].amount};
+			}
+		};
+	},
+	//helperfunctions for iteams
 	getItem:function(id){
 		var i,base=this;
 		for(i=0; i<base.db.items.length; i++) {
@@ -73,6 +139,11 @@ enyo.kind({
 				return base.db.items[i];
 			}
 		}
+	},
+	//general app helpers
+	logIn:function(paddleId,pass){
+		if(paddleId==1525)
+			return true;
 	},
 	goBack:function(){
 		switch(this.page){

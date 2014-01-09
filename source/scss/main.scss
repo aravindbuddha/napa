@@ -74,6 +74,14 @@ button{
   position: relative;
   
 }
+.yellow-btn{
+  background: #f7bf46;
+  color: #333;
+  box-shadow: 0 3px 0px rgba(0,0,0,0.2);
+  padding: 8px;
+  border-radius: 0 !important;
+  border: 0;
+}
 /*****************************
 	--> Onyx OverWrite
 ******************************/
@@ -86,7 +94,9 @@ button{
   border-bottom: 2px solid #d6cec8;
   cursor: pointer;
 }
-
+.onyx-scrim {
+  background: rgba(0,0,0,0.5) !important;
+}
 .toolbar {
   background: #3d2f20;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -98,6 +108,16 @@ button{
   font-size: 20px;
   cursor: default;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.nav-back-icon-wrap{
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  float: left;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-right: 10px;
 }
 .nav-icon-wrap{
   cursor: pointer;
@@ -206,6 +226,7 @@ margin-right: 5px;
   img{
     float: left;
     min-width: 77px;
+    cursor: pointer;
   }
   .info{
     span{
@@ -507,27 +528,36 @@ margin-right: 5px;
       width: auto;
     }
     b.amount{
-      padding: 0 2%;
+      padding: 0 2.5%;
     }
   }
-  
+  .show-all-bids{
+    margin: auto;
+    @extend .yellow-btn;
+  }
 }
 .history-items{
    border: 1px solid #d1d1d1;
    border-top: 0;
    background: #fff;
    color: #3d2f20;
-   padding: 10px;
+   padding: 3px 10px;
    overflow: hidden;
 
    .idname{
       width: 40%;
+
+      > *:first-child{
+        font-size: 13px;
+      }
    }
    .amount{
       width: 20%;
    }
    .time{
       width: 40%;
+      padding-left: 10%;
+      color: #989793;
    }
    a{
     color: #ff8a15;
@@ -554,4 +584,102 @@ margin-right: 5px;
     border-bottom: 2px solid #d6cec8;
     cursor: pointer;
    }
+}
+
+/*User Login*/
+.bg-green{
+    background: white url("img/bg-green.jpg") 0 100% no-repeat;
+    background-size: 100%;
+}
+.logo{
+  background: url('img/logo.png') no-repeat;
+  width: image-width("../css/img/logo.png");
+  height: image-height("../css/img/logo.png");
+  margin: 0 auto;
+}
+.login{
+  .outer-wrap{
+    @extend .bg-green;
+    padding: 20% 20px;
+    height: 100%;
+  }
+  .logo{
+    margin-top:100px; 
+  }
+  .date-time{
+    text-align: center;
+    color: #838383;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+  }
+  form{
+    text-align: center;
+    & > *{
+      margin: 10px 0;
+      box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+    }
+  }
+  .login-btn{
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    background: #687819;
+    color: #fff;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #c3b55f;
+    border-radius: 10px;
+    padding: 7px;
+  }
+}
+
+/*my bids*/
+.mybids{
+  .headder{
+    overflow: hidden;
+    b{
+      height: 40px;
+      line-height: 40px;
+      float: left;
+      font-size: 13px;
+      &:first-child{
+        padding-left:2%; 
+      }
+      &:last-child{
+        padding-left: 3%;
+      }
+    }
+  }
+  .mybids-item{
+    border: 1px solid #d1d1d1;
+    border-top: 0;
+    background: #fff;
+    color: #3d2f20;
+    padding: 10px;
+    > *{
+     padding-right: 11%;
+    }
+  }
+}
+/*notifications*/
+.notifications{
+  .notification-item{
+    margin: 10px;
+    background: #fff;
+    padding: 10px;
+    .img{
+      float: left;
+      width: 20%;
+      color: #f50d26;
+      padding-top: 4%;
+      font-size: 20px;
+      padding-right: 15%;
+    }
+    .msg{
+      font-size: 13px;
+      color: #ff8a15;
+    }
+  }
 }

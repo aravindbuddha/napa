@@ -2,7 +2,7 @@ enyo.kind({
 	name: "App.Home",
  	kind: enyo.Control,
   layoutKind: "FittableRowsLayout",
-	classes:'main-wrap enyo-fit enyo-unselectable',
+	classes:'main-wrap home enyo-fit enyo-unselectable',
 	components:[
 		{kind: "onyx.Toolbar", components: [
 			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
@@ -32,18 +32,11 @@ enyo.kind({
 			nav.attributes.isActive=false;
 		}
 	},
-	getData:function(){ 
-		var base=this,xhr;
-		//set up enyo.AjaxProperties the enyo.Ajax constructor
-    xhr = new enyo.Ajax({url: "source/js/db.json"});
-    xhr.response(enyo.bind(this, "processResults"));
-		xhr.go();
-	},
 	displayItems: function() { 
-		var l = new enyo.Control;
-		var main=this.$.main;
+		var
+		l = new enyo.Control,
+		main=this.$.main;
 		main.destroyClientControls();
-		
 		app.db.items.forEach(function(Item){
 			l.createComponent({
 				kind: App.Home.ItemShort,
@@ -51,7 +44,7 @@ enyo.kind({
 				pic:Item.pic,
 				id:Item.id,
 				lotname:Item.lotName,
-				amount:Item.amount,
+				amount:app.getHighBid(Item.id),
 				time:Item.time
 			});
 		});

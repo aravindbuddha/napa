@@ -1,9 +1,10 @@
 enyo.kind({
 	name: "App.MyBids",
 	kind: enyo.Control,
-	kind: enyo.Control,
-  layoutKind: "FittableRowsLayout",
-	classes:'main-wrap enyo-fit enyo-unselectable',
+	db:{},
+	fit: true,
+	tag:'div',
+	classes:'main-wrap mybids',
 	create: function() { 
 		this.inherited(arguments);
 		this.displayItems();
@@ -16,13 +17,14 @@ enyo.kind({
 			{tag:'h1',name:"heading",classes:"heading",content:"My Bids"},
 			{tag:'div',classes:"clear"}
 		]},
-		{kind:App.Nav, name:'side',classes:'side-wrap'},
-		{kind: "enyo.Scroller", fit: true, components: [
+		{kind: "enyo.Scroller",strategyKind:"TransitionScrollStrategy", horizontal: "hidden",touch: true,fit: true, components: [
+			{kind:App.Nav, name:'side',classes:'side-wrap'},
 			{tag:"div",classes:"inner-wrap",components:[
 				{tag:'div',classes:'headder',components:[
 					{tag:'b',content:"Wine from"},
-					{tag:'b',content:"Current Bid"},
-					{tag:'b',content:"Time Left"}
+					{tag:'b',content:"Position"},
+					{tag:'b',content:"Amt"},
+					{tag:'b',content:"High"}
 				]},
 				{name:"main", allowHtml: true}
 			]}
@@ -42,17 +44,17 @@ enyo.kind({
 		var l = new enyo.Control;
 		var main=this.$.main;
 		main.destroyClientControls();
-		app.db.items.forEach(function(Item){
+		app.getMyBids().forEach(function(Item){
 			l.createComponent({
-				kind: App.MyWatch.ItemList,
+				kind: App.MyBids.ItemList,
 				container: main,
-				id:"#"+Item.id+" ",
+				id:"#"+Item.lotId+" ",
 				lotname:Item.lotName.substring(0,6)+"...",
+				position:Item.position,
 				amount:Item.amount,
-				time:Item.time
+				high:Item.high
 			});
 		});
-
 		this.$.main.render();
 	},	
 });

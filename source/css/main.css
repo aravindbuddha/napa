@@ -90,15 +90,25 @@ button {
   position: relative;
 }
 
+/* line 77, ../scss/main.scss */
+.yellow-btn, .bidPopup button, .history .show-all-bids {
+  background: #f7bf46;
+  color: #333;
+  box-shadow: 0 3px 0px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 0 !important;
+  border: 0;
+}
+
 /*****************************
 	--> Onyx OverWrite
 ******************************/
-/* line 80, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 .onyx-toolbar {
   background: #3d2f20 !important;
 }
 
-/* line 83, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 .onyx-button {
   background: #f7bf46;
   text-align: center;
@@ -106,7 +116,12 @@ button {
   cursor: pointer;
 }
 
-/* line 90, ../scss/main.scss */
+/* line 97, ../scss/main.scss */
+.onyx-scrim {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* line 100, ../scss/main.scss */
 .toolbar {
   background: #3d2f20;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -120,7 +135,19 @@ button {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* line 102, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
+.nav-back-icon-wrap {
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  float: left;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 3px;
+  padding-right: 10px;
+}
+
+/* line 122, ../scss/main.scss */
 .nav-icon-wrap {
   cursor: pointer;
   display: block;
@@ -130,7 +157,7 @@ button {
   text-decoration: none;
 }
 
-/* line 110, ../scss/main.scss */
+/* line 130, ../scss/main.scss */
 .nav-icon, .nav-icon:before, .nav-icon:after {
   width: 20px;
   height: 3px;
@@ -138,7 +165,7 @@ button {
   background: #fff;
 }
 
-/* line 116, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 .nav-icon {
   cursor: pointer;
   float: left;
@@ -147,23 +174,23 @@ button {
   margin-right: 5px;
 }
 
-/* line 123, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 .nav-icon:before, .nav-icon:after {
   content: "";
   position: absolute;
 }
 
-/* line 127, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 .nav-icon:before {
   top: -7px;
 }
 
-/* line 130, ../scss/main.scss */
+/* line 150, ../scss/main.scss */
 .nav-icon:after {
   top: 7px;
 }
 
-/* line 134, ../scss/main.scss */
+/* line 154, ../scss/main.scss */
 .heading {
   float: left;
   color: #ffe7d7;
@@ -173,7 +200,7 @@ button {
   height: 30px;
 }
 
-/* line 142, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 .side-wrap {
   background: #282421;
   /* Old browsers */
@@ -192,7 +219,7 @@ button {
   /* IE6-9 */
 }
 
-/* line 151, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 .side-wrap {
   max-width: 300px;
   height: 100%;
@@ -204,12 +231,12 @@ button {
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 19px;
 }
-/* line 162, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 .side-wrap.active {
   left: 0;
 }
 
-/* line 167, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 .side-nav li {
   padding: 5px;
   padding-left: 20px;
@@ -218,77 +245,78 @@ button {
   border-top: 1px solid #3a362d;
 }
 
-/* line 174, ../scss/main.scss */
+/* line 194, ../scss/main.scss */
 .side-nav [class*=" fi-"]::before {
   font-style: 20px;
   padding-right: 15px;
   color: #ff8a16;
 }
 
-/* line 179, ../scss/main.scss */
+/* line 199, ../scss/main.scss */
 .side-nav .fi-label[class*=" fi-"]::before {
   color: #f6ca35;
 }
 
-/* line 184, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .side-nav li.fi-label {
   color: #888;
 }
-/* line 187, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 .side-nav li.fi-user, .side-nav li.fi-label {
   background: #070506;
   border: 0;
 }
 
-/* line 193, ../scss/main.scss */
+/* line 213, ../scss/main.scss */
 .side-nav li:last-child {
   border-bottom: 0;
 }
 
-/* line 198, ../scss/main.scss */
+/* line 218, ../scss/main.scss */
 .item-wrap {
   padding: 10px 5px;
 }
 
-/* line 201, ../scss/main.scss */
+/* line 221, ../scss/main.scss */
 .item {
   width: auto;
   overflow: hidden;
   border-left: 1px solid #d6cec8;
   border-bottom: 3px solid #d6cec8;
 }
-/* line 206, ../scss/main.scss */
+/* line 226, ../scss/main.scss */
 .item img {
   float: left;
   min-width: 77px;
+  cursor: pointer;
 }
-/* line 211, ../scss/main.scss */
+/* line 232, ../scss/main.scss */
 .item .info span {
   display: inline-block;
 }
-/* line 215, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 .item .info .top {
   height: 36px;
   overflow: hidden;
 }
-/* line 219, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 .item .info .middle {
   height: 33px;
   overflow: hidden;
   color: #4f4438;
   text-align: center;
 }
-/* line 224, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 .item .info .middle span {
   border-right: 1px solid #d6cdc4;
 }
-/* line 228, ../scss/main.scss */
+/* line 249, ../scss/main.scss */
 .item .info .bottom {
   height: 35px;
   overflow: hidden;
   border-top: 1px solid #d6cdc4;
 }
-/* line 232, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 .item .info .bottom a {
   display: block;
   text-decoration: none;
@@ -305,7 +333,7 @@ button {
   top: -5px;
   padding-top: 6px;
 }
-/* line 247, ../scss/main.scss */
+/* line 268, ../scss/main.scss */
 .item .info .bottom a:before {
   border-radius: 50%;
   background-color: #ff8a15;
@@ -319,7 +347,7 @@ button {
   left: 10%;
 }
 
-/* line 264, ../scss/main.scss */
+/* line 285, ../scss/main.scss */
 .item .info .id {
   background: #c98d23;
   line-height: 36px;
@@ -330,7 +358,7 @@ button {
   cursor: pointer;
   color: #fff;
 }
-/* line 274, ../scss/main.scss */
+/* line 295, ../scss/main.scss */
 .item .info .lotname {
   background: #f7bf46;
   line-height: 36px;
@@ -341,7 +369,7 @@ button {
   color: #fff;
   cursor: pointer;
 }
-/* line 284, ../scss/main.scss */
+/* line 305, ../scss/main.scss */
 .item .info .amount {
   background: #f7f4ed;
   line-height: 33px;
@@ -349,18 +377,18 @@ button {
   width: 60%;
   text-align: center;
 }
-/* line 291, ../scss/main.scss */
+/* line 312, ../scss/main.scss */
 .item .info .time {
   background: #e6e0d8;
   text-align: center;
   width: 40%;
   line-height: 33px;
 }
-/* line 298, ../scss/main.scss */
+/* line 319, ../scss/main.scss */
 .item .info .bottom .watchlist {
   width: 40%;
 }
-/* line 301, ../scss/main.scss */
+/* line 322, ../scss/main.scss */
 .item .info .bottom .bid {
   width: 27%;
   background: #ffe3c5;
@@ -369,16 +397,16 @@ button {
 }
 
 /*Finder Classes*/
-/* line 314, ../scss/main.scss */
+/* line 335, ../scss/main.scss */
 #find_main {
   border: 1px solid #d1d1d1;
 }
 
-/* line 318, ../scss/main.scss */
+/* line 339, ../scss/main.scss */
 .finder .fi-search {
   margin-right: 10px;
 }
-/* line 322, ../scss/main.scss */
+/* line 343, ../scss/main.scss */
 .finder .finder-search {
   width: 100%;
   padding: 10px;
@@ -388,7 +416,7 @@ button {
   background-color: #ffffff;
 }
 
-/* line 332, ../scss/main.scss */
+/* line 353, ../scss/main.scss */
 .finder-item {
   background: #fff;
   border-bottom: 1px solid #d3c0ab;
@@ -398,7 +426,7 @@ button {
   color: #333232;
   cursor: pointer;
 }
-/* line 341, ../scss/main.scss */
+/* line 362, ../scss/main.scss */
 .finder-item .id {
   background: #3d2f20;
   color: #ff8a15;
@@ -407,30 +435,30 @@ button {
   font-weight: bold;
   float: left;
 }
-/* line 349, ../scss/main.scss */
+/* line 370, ../scss/main.scss */
 .finder-item .info {
   line-height: 14px;
 }
-/* line 351, ../scss/main.scss */
+/* line 372, ../scss/main.scss */
 .finder-item .info .lotname {
   display: block;
   font-size: 87.5%;
 }
-/* line 355, ../scss/main.scss */
+/* line 376, ../scss/main.scss */
 .finder-item .info .desc {
   color: #9e9d9d;
   font-size: 12px;
 }
 
 /*MyWatch Classes*/
-/* line 363, ../scss/main.scss */
+/* line 384, ../scss/main.scss */
 .headder {
   background: #c98d23;
   margin-top: 10px;
   color: #fff;
   text-align: center;
 }
-/* line 368, ../scss/main.scss */
+/* line 389, ../scss/main.scss */
 .headder b {
   text-align: center;
   font-weight: normal;
@@ -439,7 +467,7 @@ button {
   display: inline-block;
 }
 
-/* line 377, ../scss/main.scss */
+/* line 398, ../scss/main.scss */
 .watchlist-item {
   border: 1px solid #d1d1d1;
   border-top: 0;
@@ -447,21 +475,21 @@ button {
   color: #3d2f20;
   padding: 10px;
 }
-/* line 383, ../scss/main.scss */
+/* line 404, ../scss/main.scss */
 .watchlist-item a {
   color: #ff8a15;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 387, ../scss/main.scss */
+/* line 408, ../scss/main.scss */
 .watchlist-item a:hover {
   color: #ff8a15;
 }
-/* line 391, ../scss/main.scss */
+/* line 412, ../scss/main.scss */
 .watchlist-item > span {
   padding-left: 5%;
 }
-/* line 394, ../scss/main.scss */
+/* line 415, ../scss/main.scss */
 .watchlist-item button {
   margin-left: 5%;
   background: #f7bf46;
@@ -471,27 +499,27 @@ button {
 }
 
 /*item */
-/* line 404, ../scss/main.scss */
+/* line 425, ../scss/main.scss */
 .item-head {
   font-weight: normal;
   text-align: center;
   float: none;
 }
 
-/* line 410, ../scss/main.scss */
+/* line 431, ../scss/main.scss */
 .item-full .pic {
   width: 100%;
 }
-/* line 413, ../scss/main.scss */
+/* line 434, ../scss/main.scss */
 .item-full .desc {
   color: #333232;
   padding: 10px;
 }
-/* line 417, ../scss/main.scss */
+/* line 438, ../scss/main.scss */
 .item-full .viewmore {
   float: right;
 }
-/* line 420, ../scss/main.scss */
+/* line 441, ../scss/main.scss */
 .item-full .bid-btn {
   width: 100%;
   padding: 10px;
@@ -499,7 +527,7 @@ button {
   text-align: center;
 }
 
-/* line 427, ../scss/main.scss */
+/* line 448, ../scss/main.scss */
 .amountBtn, .addWatchBtn {
   width: 48%;
   padding: 10px;
@@ -507,18 +535,18 @@ button {
   border-bottom: 2px solid #ccc6c2;
 }
 
-/* line 433, ../scss/main.scss */
+/* line 454, ../scss/main.scss */
 .amountBtn {
   margin-right: 2%;
 }
 
-/* line 436, ../scss/main.scss */
+/* line 457, ../scss/main.scss */
 .addWatchBtn {
   margin-left: 2%;
   background: #f7bf46;
   position: relative;
 }
-/* line 440, ../scss/main.scss */
+/* line 461, ../scss/main.scss */
 .addWatchBtn:before {
   position: absolute;
   right: 10%;
@@ -526,7 +554,7 @@ button {
 }
 
 /*Bidding*/
-/* line 448, ../scss/main.scss */
+/* line 469, ../scss/main.scss */
 .mask {
   position: absolute;
   background: #333;
@@ -537,7 +565,7 @@ button {
   display: none;
 }
 
-/* line 458, ../scss/main.scss */
+/* line 479, ../scss/main.scss */
 .bidding .bid-btn {
   width: 100%;
   background: #f7bf46;
@@ -548,27 +576,27 @@ button {
   border: 0;
 }
 
-/* line 468, ../scss/main.scss */
+/* line 489, ../scss/main.scss */
 .biding-row {
   padding: 5px;
   background: #fff;
 }
 
-/* line 472, ../scss/main.scss */
+/* line 493, ../scss/main.scss */
 .biding-row label {
   width: 70%;
   display: block;
   float: left;
 }
 
-/* line 477, ../scss/main.scss */
+/* line 498, ../scss/main.scss */
 .biding-row input {
   width: 30%;
   border: 1px solid #d6d1cc;
   padding: 5px;
 }
 
-/* line 483, ../scss/main.scss */
+/* line 504, ../scss/main.scss */
 .bidPopup {
   margin: 10px;
   text-align: center;
@@ -576,81 +604,202 @@ button {
   background: #fff !important;
   padding: 25px !important;
 }
-/* line 489, ../scss/main.scss */
+/* line 510, ../scss/main.scss */
 .bidPopup button {
   margin-top: 10px !important;
   width: 48%;
 }
-/* line 493, ../scss/main.scss */
+/* line 514, ../scss/main.scss */
 .bidPopup button.confirm {
   margin-left: 4%;
 }
 
-/* line 499, ../scss/main.scss */
+/* line 520, ../scss/main.scss */
 .history-list {
   margin: 0 10px;
 }
 
-/* line 503, ../scss/main.scss */
+/* line 524, ../scss/main.scss */
 .history .headder {
   padding: 10px;
 }
-/* line 505, ../scss/main.scss */
+/* line 526, ../scss/main.scss */
 .history .headder b {
   padding: 0;
   width: auto;
 }
-/* line 509, ../scss/main.scss */
+/* line 530, ../scss/main.scss */
 .history .headder b.amount {
-  padding: 0 2%;
+  padding: 0 2.5%;
+}
+/* line 534, ../scss/main.scss */
+.history .show-all-bids {
+  margin: auto;
 }
 
-/* line 515, ../scss/main.scss */
+/* line 539, ../scss/main.scss */
 .history-items {
   border: 1px solid #d1d1d1;
   border-top: 0;
   background: #fff;
   color: #3d2f20;
-  padding: 10px;
+  padding: 3px 10px;
   overflow: hidden;
 }
-/* line 523, ../scss/main.scss */
+/* line 547, ../scss/main.scss */
 .history-items .idname {
   width: 40%;
 }
-/* line 526, ../scss/main.scss */
+/* line 550, ../scss/main.scss */
+.history-items .idname > *:first-child {
+  font-size: 13px;
+}
+/* line 554, ../scss/main.scss */
 .history-items .amount {
   width: 20%;
 }
-/* line 529, ../scss/main.scss */
+/* line 557, ../scss/main.scss */
 .history-items .time {
   width: 40%;
+  padding-left: 10%;
+  color: #989793;
 }
-/* line 532, ../scss/main.scss */
+/* line 562, ../scss/main.scss */
 .history-items a {
   color: #ff8a15;
   text-decoration: underline;
   cursor: pointer;
 }
-/* line 536, ../scss/main.scss */
+/* line 566, ../scss/main.scss */
 .history-items a:hover {
   color: #ff8a15;
 }
-/* line 540, ../scss/main.scss */
+/* line 570, ../scss/main.scss */
 .history-items > span {
   display: block;
   float: left;
   padding-left: 5%;
 }
-/* line 545, ../scss/main.scss */
+/* line 575, ../scss/main.scss */
 .history-items > span:first-child {
   padding: 0;
 }
-/* line 550, ../scss/main.scss */
+/* line 580, ../scss/main.scss */
 .history-items button {
   margin-left: 5%;
   background: #f7bf46;
   padding: 5px;
   border-bottom: 2px solid #d6cec8;
   cursor: pointer;
+}
+
+/*User Login*/
+/* line 590, ../scss/main.scss */
+.bg-green, .login .outer-wrap {
+  background: white url("img/bg-green.jpg") 0 100% no-repeat;
+  background-size: 100%;
+}
+
+/* line 594, ../scss/main.scss */
+.logo {
+  background: url("img/logo.png") no-repeat;
+  width: 253px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+/* line 601, ../scss/main.scss */
+.login .outer-wrap {
+  padding: 20% 20px;
+  height: 100%;
+}
+/* line 606, ../scss/main.scss */
+.login .logo {
+  margin-top: 100px;
+}
+/* line 609, ../scss/main.scss */
+.login .date-time {
+  text-align: center;
+  color: #838383;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+/* line 616, ../scss/main.scss */
+.login form {
+  text-align: center;
+}
+/* line 618, ../scss/main.scss */
+.login form > * {
+  margin: 10px 0;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+}
+/* line 625, ../scss/main.scss */
+.login .login-btn {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  background: #687819;
+  color: #fff;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #c3b55f;
+  border-radius: 10px;
+  padding: 7px;
+}
+
+/*my bids*/
+/* line 640, ../scss/main.scss */
+.mybids .headder {
+  overflow: hidden;
+}
+/* line 642, ../scss/main.scss */
+.mybids .headder b {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  font-size: 13px;
+}
+/* line 647, ../scss/main.scss */
+.mybids .headder b:first-child {
+  padding-left: 2%;
+}
+/* line 650, ../scss/main.scss */
+.mybids .headder b:last-child {
+  padding-left: 3%;
+}
+/* line 655, ../scss/main.scss */
+.mybids .mybids-item {
+  border: 1px solid #d1d1d1;
+  border-top: 0;
+  background: #fff;
+  color: #3d2f20;
+  padding: 10px;
+}
+/* line 661, ../scss/main.scss */
+.mybids .mybids-item > * {
+  padding-right: 11%;
+}
+
+/*notifications*/
+/* line 668, ../scss/main.scss */
+.notifications .notification-item {
+  margin: 10px;
+  background: #fff;
+  padding: 10px;
+}
+/* line 672, ../scss/main.scss */
+.notifications .notification-item .img {
+  float: left;
+  width: 20%;
+  color: #f50d26;
+  padding-top: 4%;
+  font-size: 20px;
+  padding-right: 15%;
+}
+/* line 680, ../scss/main.scss */
+.notifications .notification-item .msg {
+  font-size: 13px;
+  color: #ff8a15;
 }

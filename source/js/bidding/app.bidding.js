@@ -11,13 +11,13 @@ enyo.kind({
   },
 	components:[
 		{kind: "onyx.Toolbar", components: [
-			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-icon-wrap",components:[
+			{tag:'a',ontap:"navIconTap",name:"navIcon",href:"#",classes:"nav-back-icon-wrap",components:[
 				{tag:'span',classes:"nav-icon-back fi-left-arrow"}
 			]},
 			{tag:'h1',name:"heading",classes:"heading",content:"Bidding"},
 			{tag:'div',classes:"clear"}
 		]},
-		{kind:"Panels",name:"mask",classes:"mask",ontap:"hideMak"},
+		//{kind:"Panels",name:"mask",classes:"mask",ontap:"hideMak"},
 		{kind: "Panels",classes:"scroll-panal inner-wrap", draggable: false,  components: [
 			{kind: "onyx.Groupbox", components: [
 				{kind:"FittableColumns",classes:"biding-row",components:[
@@ -55,7 +55,7 @@ enyo.kind({
 	showBidPopup:function(inSender, inEvent) {
 		var bidVal=this.$.yourBid.getValue();
 		this.$.msg.setContent("You just bid $"+bidVal+" for the wine from #"+this.lotId+" "+this.lotName);
-		this.$.mask.applyStyle('display','block');
+	//	this.$.mask.applyStyle('display','block');
 		this.$.bidPopup.show();
 	},
 	popupHidden: function() {
@@ -64,7 +64,7 @@ enyo.kind({
 		if(this.$.bidPopup.showing) {   // Refocus input on modal
 			this.startJob("focus", function() { 
 				this.$.yourBid.focus(); 
-				this.$.mask.applyStyle('display','block');
+			//	this.$.mask.applyStyle('display','block');
 			}, 500);
 		}
 	},
@@ -75,10 +75,7 @@ enyo.kind({
 	},
 	closeModalPopup: function() {
 		this.$.bidPopup.hide();
-		this.$.mask.applyStyle('display','none');
-	},
-	hideMask:function() { 
-		this.$.mask.applyStyle('display','none');
+	//	this.$.mask.applyStyle('display','none');
 	},
 	init: function() {
 		var data=app.getBidDetails(this.lotId); 

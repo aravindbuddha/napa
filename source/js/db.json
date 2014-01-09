@@ -14,7 +14,7 @@
         {
             "id": 303,
             "lotName": "Acacia Vineyard",
-            "amount": 2500,
+            "amount": 3500,
             "minIncrement":250,
             "pic": "source/wine/btl_2.png",
             "time": "6hrs 20m",
@@ -22,8 +22,8 @@
         },
         {
             "id": 304,
-            "lotName": "Acacia Vineyard",
-            "amount": 2500,
+            "lotName": "Amici Cellars",
+            "amount": 4500,
             "minIncrement":250,
             "pic": "source/wine/btl_3.png",
             "time": "6hrs 20m",
@@ -31,7 +31,7 @@
         },
         {
             "id": 305,
-            "lotName": "Acacia Vineyard",
+            "lotName": "Araujo Estate Wines",
             "amount": 2500,
             "minIncrement":250,
             "pic": "source/wine/btl_4.png",
@@ -40,8 +40,8 @@
         },
         {
             "id": 306,
-            "lotName": "Acacia Vineyard",
-            "amount": 2500,
+            "lotName": "Ardente Winery ",
+            "amount": 3500,
             "minIncrement":250,
             "pic": "source/wine/btl_4.png",
             "time": "6hrs 20m",
@@ -55,6 +55,33 @@
             "pic": "source/wine/btl_4.png",
             "time": "6hrs 20m",
             "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
+        },
+        {
+            "id": 308,
+            "lotName": "Acacia Vineyard",
+            "amount": 2500,
+            "minIncrement":250,
+            "pic": "source/wine/btl_4.png",
+            "time": "6hrs 20m",
+            "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
+        },
+        {
+            "id": 309,
+            "lotName": "Acacia Vineyard",
+            "amount": 2500,
+            "minIncrement":250,
+            "pic": "source/wine/btl_4.png",
+            "time": "6hrs 20m",
+            "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
+        },
+        {
+            "id": 400,
+            "lotName": "Acacia Vineyard",
+            "amount": 2500,
+            "minIncrement":250,
+            "pic": "source/wine/btl_4.png",
+            "time": "6hrs 20m",
+            "desc": "For many years, the origin of Cabernet Sauvignon was not clearly understood and many myths and conjectures surrounded it. The word \"Sauvignon\" is believed to be derived from the French sauvage meaning \"wild\".The word \"Sauvignon\" is believed to be derived from the French sauvage meaning The word \"Sauvignon\" is believed to be derived from the French sauvage meaning"
         }
     ],
     "users": [
@@ -62,14 +89,14 @@
             "id": 1,
             "username": "Ryan Murphy",
             "paddleId": "1525",
-            "location":"Westboro, MA",
+            "place":"Westboro, MA",
             "watchlist": "302,303,304,305,306,307"
         },
         {
             "id": 2,
             "username": "Aravind B",
             "paddleId": "1425",
-            "location":"Vizag, IN",
+            "place":"Vizag, IN",
             "watchlist": "302,303,304,305,306,307"
         }
     ],
@@ -77,58 +104,68 @@
         {
             "id": 1,
             "lotId": "302",
-            "paddleId": "1525",
+            "paddleId": 1525,
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 2,
             "lotId": "303",
-            "paddleId": "1525",
-            "amount": "5600",
+            "paddleId": 1525,
+            "amount": "7000",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 3,
             "lotId": "304",
-            "paddleId": "1525",
+            "paddleId": 1525,
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 4,
             "lotId": "305",
-            "paddleId": "1525",
+            "paddleId": 1525,
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 6,
             "lotId": "306",
-            "paddleId": "1525",
+            "paddleId": 1525,
             "amount": "5600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 7,
             "lotId": "302",
-            "paddleId": "1525",
-            "amount": "5600",
+            "paddleId": 1525,
+            "amount": "4600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 8,
             "lotId": "302",
-            "paddleId": "1525",
-            "amount": "5600",
+            "paddleId": 1525,
+            "amount": "3600",
             "time": "6/2/2013 5:59:41 PM"
         },
         {
             "id": 9,
             "lotId": "302",
-            "paddleId": "1525",
-            "amount": "5600",
+            "paddleId": 1525,
+            "amount": "2600",
             "time": "6/2/2013 5:59:41 PM"
+        }
+    ],
+    "notifications":[
+        {
+            "paddleId":1525,
+            "msg":"Paddle #122 outbid you for the wine from #326 Araujo Estate Wine"
+        },
+        {
+            "paddleId":1525,
+            "msg":"Paddle #302 outbid you for the wine from #306 B Cellars"
         }
     ]
 }
